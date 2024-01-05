@@ -2,7 +2,7 @@ from math import pow
 
 """
    This is a program that reads in an investment amount, th e annual interest rate,
-   and the number of years, and displays the future investm ent value.
+   and the number of years, and displays the future investment value.
 """
 
 # Reads in the investment amount.
@@ -22,4 +22,3 @@ futureInvestmentValue = investmentAmount * pow(1 + monthlyInterestRate, years * 
 
 # Displays the result.
 print(f"\nAccumulated value is: {futureInvestmentValue:.2f}")
-
