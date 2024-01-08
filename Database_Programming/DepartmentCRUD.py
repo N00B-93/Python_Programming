@@ -46,9 +46,9 @@ def searchDepartment():
         connectionCursor.execute(sqlQuery, (departmentID,))
 
         department = connectionCursor.fetchone()
-        
+
         if not department:
-            print("\n No suchDepartment!")
+            print("\n No such Department!")
             return
 
         print(f"\nDepartment Found!\n\nDepartment Name: {department[0]}")
