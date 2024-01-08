@@ -45,7 +45,13 @@ def searchDepartment():
 
         connectionCursor.execute(sqlQuery, (departmentID,))
 
-        print(f"\nDepartment Found!\n\nDepartment Name: {connectionCursor.fetchone()[0]}")
+        department = connectionCursor.fetchone()
+        
+        if not department:
+            print("\n No suchDepartment!")
+            return
+
+        print(f"\nDepartment Found!\n\nDepartment Name: {department[0]}")
 
         connection.commit()
     except sqlite3.Error as error:
