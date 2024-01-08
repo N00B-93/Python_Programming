@@ -114,7 +114,7 @@ def deleteDepartment():
     return
 
 
-def showALlDepartment():
+def showAllDepartment():
     connection = None
 
     try:
@@ -177,7 +177,7 @@ def main():
                 else:
                     exit(0)
             case '5':
-                showALlDepartment()
+                showAllDepartment()
                 choice = input("\nWould you like to continue? ('y' for yes, 'n' for no): ")
                 if choice == 'y':
                     continue
