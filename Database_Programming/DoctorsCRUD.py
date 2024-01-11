@@ -18,7 +18,7 @@ def addNewDoctor():
         hospitalID = int(input("\nEnter HospitalID: "))
         joiningDate = input("\nEnter Joining Date (dd/mm/yyyy): ")
         speciality = input("\nEnter Speciality: ")
-        salary = float(input("\nEnter Salary: "))
+        salary = float(input("\nEnter Salary: $ "))
         experience = input("\nEnter Years of Experience: ")
 
         connectionCursor.execute(sqlQuery, (doctorID, doctorName, hospitalID, joiningDate,
@@ -104,7 +104,7 @@ def updateDoctorDetails():
                 connectionCursor.execute(sqlQuery, (newHospitalID, doctorID))
                 detail = "HospitalID"
             case '4':
-                newSalary = input("\nEnter new Salary: ")
+                newSalary = input("\nEnter new Salary: $ ")
                 sqlQuery = """UPDATE Doctors SET Salary = ? WHERE DoctorID = ?"""
                 connectionCursor.execute(sqlQuery, (newSalary, doctorID))
                 detail = "Salary"
@@ -182,7 +182,7 @@ def showAllDoctors():
 
         for doctor in doctors:
             print(f"Doctor ID: {doctor[0]}\nDoctor Name: {doctor[1]}\nHospital ID: {doctor[2]}"
-                  f"\nJoined Date: {doctor[3]}\nSpeciality: {doctor[4]}\nSalary: {doctor[5]}\n"
+                  f"\nJoined Date: {doctor[3]}\nSpeciality: {doctor[4]}\nSalary: $ {doctor[5]}\n"
                   f"Years of Experience: {doctor[6]}\n")
     except sqlite3.Error as error:
         print(error)
