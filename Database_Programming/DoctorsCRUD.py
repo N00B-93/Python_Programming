@@ -166,6 +166,34 @@ def deleteDoctor():
     return
 
 
+def showAllDoctors():
+    connection = None
+
+    try:
+        connection = sqlite3.connect('hospital.db')
+
+        connectionCursor = connection.cursor()
+
+        sqlQuery = "SELECT * FROM Doctors"
+
+        connectionCursor.execute(sqlQuery)
+
+        doctors = connectionCursor.fetchall()
+
+        for doctor in doctors:
+            print(f"Doctor ID: {doctor[0]}\nDoctor Name: {doctor[1]}\nHospital ID: {doctor[2]}"
+                  f"\nJoined Date: {doctor[3]}\nSpeciality: {doctor[4]}\nSalary: {doctor[5]}\n"
+                  f"Years of Experience: {doctor[6]}\n")
+    except sqlite3.Error as error:
+        print(error)
+    except Exception as error:
+        print(error)
+    finally:
+        if connection is not None:
+            connection.close()
+    return
+
+
 def main():
     while True:
         print("\nWhat would you like to do?\n1. Add a new Doctor\n2. Search for a Doctor\n3. Update Doctor Details\n"
@@ -201,6 +229,18 @@ def main():
                     continue
                 else:
                     exit(0)
+            case '5':
+                showAllDoctors()
+                choice = input("\nWould you like to continue? ('y' for yes, 'n' for no): ")
+                if choice == 'y':
+                    continue
+                else:
+                    exit(0)
+            case '6':
+                print("\nExiting...")
+                exit(0)
+            case _:
+                print("\nInvalid Input, Try Again...")
 
 
 if __name__ == "__main__":
