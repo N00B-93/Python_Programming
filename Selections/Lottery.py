@@ -1,4 +1,5 @@
 from random import randint
+from sys import exit
 
 """
     This is a program that generates a 3-digit number and prompts the user to enter a three-digit number and determines
@@ -13,6 +14,11 @@ lotteryNumber = randint(100, 999)
 
 # prompts the user to enter a 3-digit number.
 userGuess = int(input("\nEnter a 3-digit number: "))
+
+# Checks if the number entered by the user is a 3-digit number, if not the program is terminated.
+if userGuess < 100 or userGuess > 999:
+    print("\nInvalid Input, 3-Digit number required!")
+    exit(0)
 
 # Peels off the digits in the user's input.
 firstDigit = userGuess // 100
