@@ -14,21 +14,8 @@ hexValue = ''
 # Assigns the decimal value to the hex values variable if the decimal value is in the range 0 - 9.
 if 0 <= decimal < 10:
     hexValue = decimal
-
-# Matches a decimal digit to the correct hex value.
-match decimal:
-    case 10:
-        hexValue = 'A'
-    case 11:
-        hexValue = 'B'
-    case 12:
-        hexValue = 'C'
-    case 13:
-        hexValue = 'D'
-    case 14:
-        hexValue = 'E'
-    case 15:
-        hexValue = 'F'
+else:  # Matches a decimal digit to the correct hex value.
+    hexValue = chr(ord('A') + (decimal - 10))
 
 if 0 > decimal or decimal > 15:  # Checks if the value entered is in the range 1 - 15
     print("\nInvalid Input, Try Again.")
