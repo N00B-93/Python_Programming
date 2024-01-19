@@ -5,7 +5,7 @@ from math import pow
     integer n such that n2 is greater than 12,000
 """
 
-# Initailizes variable n to 0.
+# Initializes variable n to 0.
 n = 0
 
 # Loop that keeps running till n^2 > 12000.
@@ -14,4 +14,3 @@ while pow(n, 2) < 12000:
 
 # Displays the result.
 print(f"\nThe smallest n such that n^2 > 12000 is: {n - 1}")
-

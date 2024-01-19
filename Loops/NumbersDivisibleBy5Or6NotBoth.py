@@ -18,4 +18,3 @@ for number in range(100, 201):
     # Prints a new line if counter is a multiple of 10.
     if counter % 10 == 0:
         print()
-
