@@ -21,4 +21,5 @@ while number != 0:
     elif number == maxNumber:  # Increments the counter by 1 if the current number is equal to the max number.
         countOfMax += 1
 
+# Displays the result.
 print(f"\nMax Number = {maxNumber}\nCount of Max Numbers = {countOfMax}")
