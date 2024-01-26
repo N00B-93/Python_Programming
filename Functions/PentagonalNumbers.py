@@ -9,7 +9,9 @@
 def getPentagonalNumber(number):
     """
     Returns a pentagonal number.
+
     :param number: (int) The number whose pentagonal equivalent is to be calculated.
+
     :return: (int) The pentagonal number
     """
 

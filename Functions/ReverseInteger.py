@@ -7,8 +7,10 @@
 
 def reverse(number):
     """
-    This function returns the reverse of a positive integer.
+    Returns the reverse of a positive integer.
+
     :param number: (int) The number to be reversed.
+
     :return: (int) The reversed number.
     """
 

@@ -1,3 +1,5 @@
+from sys import exit
+
 """
     This is a program that uses the functions;
             def reverse(number)
@@ -9,8 +11,10 @@
 
 def reverse(number):
     """
-    This function returns the reverse of a positive integer.
+    Returns the reverse of a positive integer.
+
     :param number: (int) The number to be reversed.
+
     :return: (int) The reversed number.
     """
 
@@ -29,7 +33,9 @@ def reverse(number):
 def isPalindrome(number):
     """
     Checks if a number is a palindrome or not.
+
     :param number: (int) The number to be checked.
+
     :return: (boolean) True if the number is palindrome otherwise False
     """
 
@@ -40,7 +46,12 @@ def isPalindrome(number):
 
 def main():
     # Reads in a number to be checked.
-    number = int(input("\nEnter a number: "))
+    number = int(input("\nEnter a positive number: "))
+
+    # Display an error message and terminates the program if the number entered by the user is negative.
+    if number < 0:
+        print("\nPositive integer required, Try again.")
+        exit(1)
 
     # Displays whether the number is a palindrome or not.
     if isPalindrome(number):
