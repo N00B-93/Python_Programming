@@ -7,7 +7,7 @@
 
 def sumDigits(number):
     """
-
+    Function to calculate the sum of digits in a number.
     :param number: (int) The number whose sum of digits is to be calculated.
     :return: (int) The sum of digits in a number
     """
