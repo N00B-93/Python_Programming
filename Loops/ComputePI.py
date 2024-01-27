@@ -11,11 +11,11 @@ PI = 0
 
 print("\ti\t\tPI")
 for i in range(10000, 100001):
-    for j in range(1, i):
-        # Calculates the value of PI from 1 to i.
-        PI += 4 * pow(-1, j + 1) / (2 * j - 1)
     if i % 10000 == 0:
-        # Displays the value of PI if i is a multiple of 1.
+        for j in range(1, i):
+            # Calculates the value of PI from 1 to i.
+            PI += 4 * pow(-1, j + 1) / (2 * j - 1)
+        # Displays the value of PI if i is a multiple of 10000.
         print(f"{i}\t\t{PI}")
     # Resets the value of PI to 0.
     PI = 0
