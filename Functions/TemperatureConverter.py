@@ -28,4 +28,4 @@ def fahrenheitToCelsius(temperature):
     :return: (float) The Celsius temperature.
     """
 
-    return (5 / 9) * temperature - 32
+    return (5 / 9) * (temperature - 32)
