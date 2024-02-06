@@ -26,10 +26,10 @@ def main():
     for i in range(1, 10):
         total += int(isbn10[i - 1]) * i
 
-    # calculates the checksum.
+    # calculates the checkSum.
     checksum = total % 11
 
-    # Displays the result based on the value of the checksum.
+    # Displays the result based on the value of the checkSum.
     if checksum == 10:
         print(f"\nThe ISBN-10 number is: {isbn10 + "X"}")
     else:
