@@ -2,7 +2,7 @@ from sys import exit
 
 
 """
-    Two words are anagrams if they containbthe same letters.
+    Two words are anagrams if they contain the same letters.
     This is a program that prompts the user to enter two Strings and determines if they
     are anagrams or not using a function with the header;
                 def isAnagram(s1, s2)
@@ -20,7 +20,7 @@ def main():
         exit(1)
 
     # Converts the Strings to lists.
-    lst1, lst2 = list(string1), list(string2);
+    lst1, lst2 = list(string1), list(string2)
     
     # Sorts the two lists.
     lst1.sort()
@@ -30,9 +30,8 @@ def main():
     if lst1 == lst2:
         print(f"\n{string1} and {string2} are anagrams.")
     else:
-        print(f"\n{string1} and {string2} arenot anagrams.")
+        print(f"\n{string1} and {string2} are not anagrams.")
 
 
 if __name__ == "__main__":
     main()
-
