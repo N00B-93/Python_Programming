@@ -1,9 +1,8 @@
 from random import randint
 
-
 """
     This is a program that prompts the user to enter a list of numbers and then shuffle
-    the list using a function with the headee;
+    the list using a function with the header;
                 def shuffle(lst)
     and then displays the shuffled list.
 """
@@ -31,13 +30,13 @@ def shuffle(lst):
 def main():
     # Reads in a collection of numbers as a String.
     numberString = input("\nEnter a list of numbers separated by space: ")
-    
+
     # Converts the String of numbers to a list.
     numberList = numberString.split()
-    
+
     # Shuffles the list
     shuffle(numberList)
-    
+
     # Prints the shuffled list.
     print("\nThe shuffled list is: ", end="")
     for i in range(len(numberList)):
@@ -46,5 +45,4 @@ def main():
 
 
 if __name__ == "__main__":
-     main()
-
+    main()
