@@ -2,13 +2,14 @@ from random import randint
 
 
 """
-    The bean machine, also known as a quincunx or the Galton box, is a device for statistics experiments named after English scientist
-    Sir Francis Galton. It consists of an upright board with evenly spaced nails (or pegs) in a triangular pattern.
+    The bean machine, also known as a quincunx or the Galton box, is a device for statistics experiments named after 
+    English scientist Sir Francis Galton. It consists of an upright board with evenly spaced nails (or pegs) in a 
+    triangular pattern.
     Balls are dropped from the opening of the board. Every time a ball hits a nail,
     it has a 50% chance of falling to the left or to the right. The piles of balls are
     accumulated in the slots at the bottom of the board.
-    This is a program that simulates the bean machine, the user is prompted to enter the number of balls and slots and the ball path
-    as it falls is displayed.
+    This is a program that simulates the bean machine, the user is prompted to enter the number of balls and slots and 
+    the ball path as it falls is displayed.
 """
 
 
@@ -47,11 +48,12 @@ def insertBallsIntoSlots(balls, numberOfSlots):
     """
     Inserts a given amount of balls into a given number of slots.
 
+    :param numberOfSlots: (int) The number of slots.
+
     :param balls: (int) The number of balls to be inserted.
 
-    :param numberOfSlot: (int) The number of slots.
-
-    :return ballSlot, ballSameSlot: (list) A list containing a ball in a single slot and a list containing multiple balls in one slot.
+    :return ballSlot, ballSameSlot: (list) A list containing a ball in a single slot and a list
+    containing multiple balls in one slot.
     """
     ballSlot = numberOfSlots * [" "]
     ballInSameSlot = []
@@ -129,4 +131,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
