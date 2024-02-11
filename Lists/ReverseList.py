@@ -1,6 +1,6 @@
 """
     This is a program that prompts the user to enter a list of numbers and reverses the
-    list using a function with the heeader;
+    list using a function with the header;
             def reverseList(lst)
 """
 
@@ -35,4 +35,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

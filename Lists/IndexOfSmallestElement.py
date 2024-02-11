@@ -1,7 +1,8 @@
 """
     This is a program that uses a function with the header;
             def indexOfSmallestElement(lst):
-    to determine the index of the smallest element in a list. The first index is returned if the number occurs more than once.
+    to determine the index of the smallest element in a list. The first index is returned if the number occurs more
+    than once.
 """
 
 
@@ -18,13 +19,13 @@ def indexOfSmallestElement(lst):
 
 
 def main():
-    # Reads in a collection of nunbers as a String.
+    # Reads in a collection of numbers as a String.
     numberString = input("\nEnter a list of integers separated by space: ")
     
     # Converts the number String to a list.
-    numberList = numberString.split();
+    numberList = numberString.split()
     
-    # Converts every elements of the number list to integers.
+    # Converts every element of the number list to integers.
     map(int, numberList)
     
     # Displays the result.
@@ -33,4 +34,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
