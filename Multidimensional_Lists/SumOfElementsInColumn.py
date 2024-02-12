@@ -26,13 +26,17 @@ def main():
     # Creates an empty list representing a matrix.
     matrix = []
 
-    # Reads in the number of rows and colunns of the matrix.
+    # Reads in the number of rows and columns of the matrix.
     rows = int(input("\nEnter the number of rows: "))
     columns = int(input("\nEnter the number of columns: "))
     
     # Read in elements into the matrix.
     for row in range(rows):
         line = input(f"\nEnter element of row {row} separated by space: ").strip().split()
+        # terminates the program if the number of elements in a row is not equal to the number of columns.
+        if len(line) != columns:
+            print(f"\nUse {columns} elements in a row!")
+            exit(2)
         matrix.append([eval(x) for x in line])
 
     # Reads in the index of the column whose sum of element is to he determined.
@@ -44,4 +48,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

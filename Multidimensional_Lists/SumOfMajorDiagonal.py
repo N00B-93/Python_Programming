@@ -26,10 +26,10 @@ def sumMajorDiagonal(matrix):
 
 
 def main():
-    # Creates a empty list to represent a matrix.
+    # Creates an empty list to represent a matrix.
     matrix = []
 
-    # Read in the number or rows and columns.
+    # Read in the number of rows and columns.
     rows = int(input("\nEnter the number of rows: "))
     columns = int(input("\nEnter the number of columns: "))
     
@@ -41,6 +41,10 @@ def main():
     # Fills the matrix with elements.
     for row in range(rows):
         line = input(f"\nEnter the elements of row {row + 1}: ").strip().split()
+        # terminates the program if the number of elements in a row is not equal to the number of columns.
+        if len(line) != columns:
+            print(f"\nUse {columns} elements in a row!")
+            exit(2)
         matrix.append([eval(x) for x in line])
 
     # Displays the result.
@@ -49,4 +53,3 @@ def main():
     
 if __name__ == "__main__":
     main()
-
