@@ -29,12 +29,11 @@ def main():
     # Reads in the number of rows and colunns of the matrix.
     rows = int(input("\nEnter the number of rows: "))
     columns = int(input("\nEnter the number of columns: "))
-
+    
+    # Read in elements into the matrix.
     for row in range(rows):
-        matrix.append([])
-        for column in range(columns):
-            value = eval(input("\nEnter an element: "))
-            matrix[row].append(value)
+        line = input(f"\nEnter element of row {row} separated by space: ").strip().split()
+        matrix.append([eval(x) for x in line])
 
     # Reads in the index of the column whose sum of element is to he determined.
     columnIndex = int(input("\nEnter the index of the column whose sum is to be calculated: "))
