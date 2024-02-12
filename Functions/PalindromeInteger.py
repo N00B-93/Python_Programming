@@ -53,7 +53,7 @@ def main():
         print("\nPositive integer required, Try again.")
         exit(1)
     elif number == 0:  # Exits the program if the user enters 0.
-        print(f"\n{number is not a Palindrome}.")
+        print(f"\n{number} is not a Palindrome.")
         exit(2)
 
     # Displays whether the number is a palindrome or not.
