@@ -58,7 +58,7 @@ def main():
 
     # Displays the result.
     print("\nThe product of the matrices is: ")
-    print(f"{matrix1[0][0]} {matrix1[0][1]} {matrix1[0][2]}\t\t{matrix1[0][0]} {matrix2[0][1]} {matrix2[0][2]}\t"
+    print(f"{matrix1[0][0]} {matrix1[0][1]} {matrix1[0][2]}\t\t{matrix2[0][0]} {matrix2[0][1]} {matrix2[0][2]}\t"
           f"\t\t{matrix3[0][0]:.2f} {matrix3[0][1]:.2f} {matrix3[0][2]:.2f}\n"
           f"{matrix1[1][0]} {matrix1[1][1]} {matrix1[1][2]}\t*\t{matrix2[1][0]} {matrix2[1][1]} {matrix2[1][2]}\t"
           f"=\t{matrix3[1][0]:.2f} {matrix3[1][1]:.2f} {matrix3[1][2]:.2f}\n"
