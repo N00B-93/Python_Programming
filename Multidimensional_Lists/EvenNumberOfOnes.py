@@ -54,9 +54,8 @@ def main():
 
     # Checks if all rows contains an even number of 1's.
     
-
-    print(lst1)
-    print(lst2)
+    lst1 = checkRows(matrix)
+    lst2 = checkColumns(matrix)
     
     # Displays the result.
     if all(lst1) and all(lst2):
