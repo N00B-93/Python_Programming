@@ -65,7 +65,7 @@ def main():
     elif all(lst2) and not all(lst1):
         print("\nOnly all columns have even number of 1's")
     else:
-        print("\nNo row or column have even number of 1's")
+        print("\nNot all rows and columns have even number of 1's")
 
 
 if __name__ == "__main__":
