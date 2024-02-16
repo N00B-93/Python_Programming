@@ -53,8 +53,7 @@ def main():
     [[print(f"{matrix[i][j]} ", end="") or j for j in range(len(matrix[i]))] and print() or i for i in range(len(matrix))]
 
     # Checks if all rows contains an even number of 1's.
-    lst1 = checkRows(matrix)
-    lst2 = checkColumns(matrix)
+    
 
     print(lst1)
     print(lst2)
