@@ -1,6 +1,10 @@
 from random import randint
 
 """
+    This is a program that generates a two-dimensional matrix filled with 0s and 1s, 
+    displays the matrix, and checks to see if every row
+    and every column has an even number of 1s.
+
 """
 
 
