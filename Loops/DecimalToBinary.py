@@ -9,17 +9,17 @@ number = int(input("\nEnter a decimal number: "))
 # Preserves the original decimal number in a temporary variable.
 tempVar = number
 
-binaryNumber = 0
+binaryNumber = ""
 
 while number != 0:
     # Determines the remainder
     remainder = number % 2
 
     # Constructs a binary number using the remainder.
-    binaryNumber = binaryNumber * 10 + remainder
+    binaryNumber += str(remainder)
 
     # Peels off the last digit.
     number //= 2
 
 # Displays the result
-print(f"\nThe binary equivalent of {tempVar} is: {binaryNumber}")
+print(f"\nThe binary equivalent of {tempVar} is: {binaryNumber[::-1]}")
