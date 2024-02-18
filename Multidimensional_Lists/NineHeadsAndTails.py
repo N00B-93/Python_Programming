@@ -8,7 +8,7 @@ def decimalToBinary(decimal):
     """
     binary = ""
 
-    while decimal !=  0:
+    while decimal != 0:
         remainder = decimal % 2
         binary += str(remainder)
         decimal //= 2
@@ -51,10 +51,9 @@ def main():
             print("H ", end="")
         else:
             print("T ", end="")
-        if i > 1 and i  % 3 == 0:
+        if i > 1 and i % 3 == 0:
             print()
 
 
 if __name__ == "__main__":
     main()
-
