@@ -57,4 +57,8 @@ class ProductionWorker(Employee):
 
         :return: (str) The string representation of the Production Worker Object.
         """
-        return super().__str__() + "\nShift: " + str(self.__shift) + "\nHourly Pay: " + str(self.__hourlyPayRate)
+        if self.getShift() == 1:
+            return (super().__str__() + "\nShift: " + 'Day' + "\nHourly Pay: $ " +
+                    str(self.__hourlyPayRate))
+        return (super().__str__() + "\nShift: " + 'Night' + "\nHourly Pay: $ " +
+                str(self.__hourlyPayRate))
