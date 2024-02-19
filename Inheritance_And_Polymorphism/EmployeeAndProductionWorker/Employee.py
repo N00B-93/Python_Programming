@@ -8,15 +8,15 @@ class Employee(object):
         employeeID (int): The ID of the employee.
     """
     def __init__(self, employeeName, employeeID):
-        self.employeeName = employeeName
-        self.employeeID = employeeID
+        self.__employeeName = employeeName
+        self.__employeeID = employeeID
 
     def getEmployeeName(self):
         """
         Returns the name of the employee.
         :return: (str) The name of the employee.
         """
-        return self.employeeName
+        return self.__employeeName
 
     def getEmployeeID(self):
         """
@@ -24,7 +24,7 @@ class Employee(object):
 
         :return: (int) The ID of the employee.
         """
-        return self.employeeID
+        return self.__employeeID
 
     def setEmployeeName(self, employeeName):
         """
@@ -34,7 +34,7 @@ class Employee(object):
 
         :return: (None).
         """
-        self.employeeName = employeeName
+        self.__employeeName = employeeName
 
     def setEmployeeID(self, employeeID):
         """
@@ -44,7 +44,7 @@ class Employee(object):
 
         :return: (None).
         """
-        self.employeeID = employeeID
+        self.__employeeID = employeeID
 
     def __str__(self):
         """
@@ -52,5 +52,4 @@ class Employee(object):
 
         :return: (str) The string representation of the Employee Object.
         """
-        return f"\nEmployee Name: {self.employeeName}\nEmployee ID: {self.employeeID}"
-    
+        return f"\nEmployee Name: {self.__employeeName}\nEmployee ID: {self.__employeeID}"
