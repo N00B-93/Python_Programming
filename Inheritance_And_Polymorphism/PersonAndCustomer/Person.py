@@ -74,5 +74,5 @@ class Person(object):
 
         :return: (str) The string representation of the Person Object.
         """
-        return (f"Name: {self.getName()} + Telephone Number: {self.getTelephoneNumber()} +"
-                f"Address: {self.getAddress()}")
+        return (f"\nName: {self.getName()}\nTelephone Number: {self.getTelephoneNumber()}"
+                f"\nAddress: {self.getAddress()}")
