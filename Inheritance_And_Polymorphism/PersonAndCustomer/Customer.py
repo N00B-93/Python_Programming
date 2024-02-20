@@ -58,4 +58,4 @@ class Customer(Person):
 
         :return: (str) The string representation of the Customer instance.
         """
-        return super().__str__() + f"\nCustomer ID: {self.getCustomerID()} \nOn Mailing List: {self.getCustomerID()}"
+        return super().__str__() + f"\nCustomer ID: {self.getCustomerID()}\nOn Mailing List: {self.getOnMailingList()}"
