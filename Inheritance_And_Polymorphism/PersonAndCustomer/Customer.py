@@ -10,6 +10,7 @@ class Customer(Person):
 
         onMailingList (bool): Whether this Customer is on a Mailing List.
     """
+
     def __init__(self, customerID, onMailingList, name, address, phoneNumber):
         super().__init__(name, address, phoneNumber)
         self.__customerID = customerID
@@ -50,3 +51,11 @@ class Customer(Person):
         :return: (None).
         """
         self.__onMailingList = onMailingList
+
+    def __str__(self):
+        """
+        Returns the string representation of the Customer instance.
+
+        :return: (str) The string representation of the Customer instance.
+        """
+        return super().__str__() + f"\nCustomer ID: {self.getCustomerID()} \nOn Mailing List: {self.getCustomerID()}"
