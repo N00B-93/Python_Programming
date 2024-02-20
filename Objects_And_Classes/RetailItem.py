@@ -68,3 +68,22 @@ class RetailItem:
         """
         self.__price = price
 
+
+def main():
+    # Creates three RetailItem Objects.
+    item1 = RetailItem("Jacket", 12, 59.95)
+    item2 = RetailItem("Designer Jeans", 40, 34.95)
+    item3 = RetailItem("Shirt", 20, 24.95)
+
+    # Prints Item details.
+    print("\n\t\tItem Details.")
+    print(f"Item Description: {item1.getDescription()}\nUnits In Inventory: {item1.getUnitsInInventory()}"
+          f"\nItem Price: $ {item1.getPrice()}")
+    print(f"\nItem Description: {item2.getDescription()}\nUnits In Inventory: {item2.getUnitsInInventory()}"
+          f"\nItem Price: $ {item2.getPrice()}")
+    print(f"\nItem Description: {item3.getDescription()}\nUnits In Inventory: {item3.getUnitsInInventory()}"
+          f"\nItem Price: $ {item3.getPrice()}")
+
+
+if __name__ == "__main__":
+    main()
