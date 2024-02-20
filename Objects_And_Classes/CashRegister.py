@@ -9,7 +9,7 @@ class CashRegister:
         
         purchasedItems (list): A list containing RetailItem Objects.
     """
-    def __init__(self, purchasedItems = []):
+    def __init__(self, purchasedItems):
         self.purchasedItems = purchasedItems
 
     def purchaseItem(self, retailItem):
@@ -30,7 +30,7 @@ class CashRegister:
         """
         total = 0
 
-        for item in purchasedItems:
+        for item in self.purchasedItems:
             total += item.getPrice()
 
         return total
@@ -42,28 +42,23 @@ class CashRegister:
         :return: (None)
         """
         self.purchasedItems.clear()
-
     
-    def showItems(self, retailItem):
+    def showItems(self):
         """
         Shows information about a retail item in the purchasedItems list.
 
-        :param retailItem: (RetailItem) The item whose information is to be displayed.
-
         :return: (str) Information about the retailItem.
         """
-        return f"\nDescription: {retailItem.getDescription()}\nUnits In Inventory: {retailItem.getUnitsInInventory()}\nPrice: {retailItem.getPrice()}"
+        return (f"\nDescription: {self.purchasedItems.getDescription()}\nUnits In Inventory: "
+                f"{self.purchasedItems.getUnitsInInventory()}\nPrice: {self.purchasedItems.getPrice()}")
 
 
 def main():
     # Creates three RetailItem Objects.
     item1 = RetailItem("Faded Jean", 45, 21.25)
     item2 = RetailItem("Hoodie", 52, 35.21)
-
     item3 = RetailItem("Leather Jacket", 11, 45.60)
-
     item4 = RetailItem("Baseball Cap", 10, 9.12)
-
     item5 = RetailItem("Nike Air Jordan", 8, 101.28)
 
     # Creates a list to represent an empty cart.
@@ -74,7 +69,8 @@ def main():
     while choice != '0':
         print("\n\t\tAvailable Items")
         
-        print(f"1. {item1.getDescription()}\n2. {item2.getDescription()}\n3. {item3.getDescription()}\n4. {item4.getDescription()}\n5. {item5.getDescription()}")
+        print(f"1. {item1.getDescription()}\n2. {item2.getDescription()}\n3. {item3.getDescription()}\n4. "
+              f"{item4.getDescription()}\n5. {item5.getDescription()}")
         choice = input("\nEnter choice(press 0 to quit): ")
 
         match choice:
@@ -97,18 +93,19 @@ def main():
     # Displays the items in the cart.
     print("\n\t\tItems in Cart:")
     print("\nItem Name\t\t\tQty")
-    for items in cart:
+    for items in cashRegister.purchasedItems:
         print(f"\n{items.getDescription()}\t\t\t{cart.count(items)}")
     
     # Displays the total price of all items in the cart.
     total = 0
 
+    # Determines the cost of all items in the
     for item in cart:
         total += item.getPrice()
 
+    # Displays the total price of all the items in the cart.
     print(f"\nThe total price of all items in the cart is: $ {total:.2f}")
 
 
 if __name__ == "__main__":
     main()
-
