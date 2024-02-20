@@ -1,6 +1,3 @@
-from datetime import date
-
-
 class Patient:
     """
     A class to represent a Patient's Charges'.
@@ -229,4 +226,50 @@ class Procedure:
 
 def main():
     # Creates three instance of a procedure.
+    procedure1 = Procedure("General Exam", "15/01/2019", "Dr. Irvine",
+                           250.0)
+    procedure2 = Procedure("X-ray", "15/10/2019", "Dr. Jamison", 500.0)
+    procedure3 = Procedure("Blood test", "15/10/2018", "Dr. Smith", 200.0)
 
+    # Prompts the user to enter his/her full name.
+    fullName = input("\nEnter your full name: ")
+
+    # Prompts the user to enter his/her address.
+    address = input("\nEnter your address: ")
+
+    # Prompts the user to enter his/her zipcode.
+    zipCode = int(input("\nEnter your zip code(e.g., 12345): "))
+
+    # Prompts the user to enter his/her phone number.
+    phoneNumber = input("\nEnter your phone number: ")
+
+    # Prompts the user to enter the name of his/her emergency contact.
+    nameOfEmergencyContact = input("\nEnter name of emergency contact: ")
+
+    # Prompts the user to enter the phone number of his/her emergency contact.
+    emergencyContactNumber = input("\nEnter your emergency contact's phone number: ")
+
+    # Creates an instance of a Patient.
+    patient = Patient(fullName, address, zipCode, phoneNumber, nameOfEmergencyContact, emergencyContactNumber)
+
+    # Display's the patient's information.
+    print("\n\t\tPatient's Information:")
+    print(f"Patient's Full Name: {patient.getFullName()}\nPatient's address: {patient.getAddress()}"
+          f"\nPatient's Zip Code: {patient.getZipCode()}\nPatient's phone number: {patient.getPhoneNumber()}"
+          f"\nPatient's Emergency Contact: {patient.getNameOfEmergencyContact()}"
+          f"\nPatient's Emergency Contact's phone number: {patient.getPhoneNumberOfEmergencyContact()}")
+
+    # Display's all the Procedure Details.
+    print("\n\t\tProcedure Details")
+    print(f"Procedure Name: {procedure1.getName()}\nProcedure Date: {procedure1.getDate()}\n"
+          f"Procedure Practitioner: {procedure1.getNameOfPractitioner()}\nCharges: $ {procedure1.getCharges()}")
+
+    print(f"\nProcedure Name: {procedure2.getName()}\nProcedure Date: {procedure2.getDate()}\n"
+          f"Procedure Practitioner: {procedure2.getNameOfPractitioner()}\nCharges: $ {procedure2.getCharges()}")
+
+    print(f"\nProcedure Name: {procedure3.getName()}\nProcedure Date: {procedure3.getDate()}\n"
+          f"Procedure Practitioner: {procedure3.getNameOfPractitioner()}\nCharges: $ {procedure3.getCharges()}")
+
+
+if __name__ == "__main__":
+    main()
