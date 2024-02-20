@@ -67,3 +67,12 @@ class Person(object):
         :return: (None).
         """
         self.__telephoneNumber = telephoneNumber
+
+    def __str__(self):
+        """
+        Returns the string representation of the Person.
+
+        :return: (str) The string representation of the Person Object.
+        """
+        return (f"Name: {self.getName()} + Telephone Number: {self.getTelephoneNumber()} +"
+                f"Address: {self.getAddress()}")
