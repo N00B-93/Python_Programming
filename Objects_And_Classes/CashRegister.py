@@ -63,27 +63,33 @@ def main():
 
     # Creates a list to represent an empty cart.
     cart = []
-    
-    choice = ""
 
-    while choice != '0':
+    while True:
         print("\n\t\tAvailable Items")
-        
-        print(f"1. {item1.getDescription()}\n2. {item2.getDescription()}\n3. {item3.getDescription()}\n4. "
-              f"{item4.getDescription()}\n5. {item5.getDescription()}")
-        choice = input("\nEnter choice(press 0 to quit): ")
+        print(f"1. {item1.getDescription()}\t\t$ {item1.getPrice()}\n2. {item2.getDescription()}"
+              f"\t\t\t$ {item2.getPrice()}\n3. {item3.getDescription()}\t$ {item3.getPrice()}\n"
+              f"4. {item4.getDescription()}\t\t$ {item4.getPrice()}\n5. {item5.getDescription()}\t$ "
+              f"{item5.getPrice()}\n6. Exit Menu")
+        choice = input("\nEnter choice: ")
 
         match choice:
             case '1':
                 cart.append(item1)
+                print(f"\n{item1.getDescription()} added to cart!")
             case '2':
                 cart.append(item2)
+                print(f"\n{item2.getDescription()} added to cart!")
             case '3':
                 cart.append(item3)
+                print(f"\n{item3.getDescription()} added to cart!")
             case '4':
                 cart.append(item4)
+                print(f"\n{item4.getDescription()} added to cart!")
             case '5':
                 cart.append(item5)
+                print(f"\n{item5.getDescription()} added to cart!")
+            case '6':
+                break
             case _:
                 print("\nInvalid option!")
     
@@ -92,9 +98,9 @@ def main():
 
     # Displays the items in the cart.
     print("\n\t\tItems in Cart:")
-    print("\nItem Name\t\t\tQty")
+    print("\nItem Name\t\tQty")
     for items in cashRegister.purchasedItems:
-        print(f"\n{items.getDescription()}\t\t\t{cart.count(items)}")
+        print(f"\n{items.getDescription()}\t\t{cart.count(items)}")
     
     # Displays the total price of all items in the cart.
     total = 0
