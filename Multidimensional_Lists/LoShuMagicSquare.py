@@ -5,7 +5,9 @@ from sys import exit
     The Lo Shu Magic Square is a grid with 3 rows and 3 columns.
     Lo Shu Magic Square has the following properties:
     • The grid contains the numbers 1 through 9 exactly.
-    • The sum of each row, each column, and each diagonal all add up to the same number.    This is a program that uses a function that accepts a 2-D list as an argument to determine if the list is a Lo Shu magic square or not.
+    • The sum of each row, each column, and each diagonal all add up to the same number.
+    This is a program that uses a function that accepts a 2-D list as an argument to determine 
+    if the list is a Lo Shu magic square or not.
 """
 
 
@@ -19,10 +21,7 @@ def sumOfRowElements(magicSquare, row):
 
     :return: (int) The sum of elements in the given row.
     """
-    total = 0
-    for column in range(len(magicSquare)):
-        total += magicSquare[row][column]
-    return total
+    return sum(magicSquare[row])
 
 
 def sumOfColumnElements(magicSquare, column):
@@ -38,7 +37,7 @@ def sumOfColumnElements(magicSquare, column):
     total = 0
     for row in range(len(magicSquare)):
         total += magicSquare[row][column]
-    return column
+    return total
 
 
 def sumMajorDiagonalElement(magicSquare):
@@ -59,7 +58,7 @@ def sumMajorDiagonalElement(magicSquare):
 
 def sumMinorDiagonalElement(magicSquare):
     """
-    Returns the sum of elements on the minor digonal of a matrix(2-D list).
+    Returns the sum of elements on the minor diagonal of a matrix(2-D list).
 
     :param magicSquare: (list) The matrix whose sum of minor diagonal is required.
 
@@ -80,7 +79,7 @@ def checkLoShuMatrix(magicSquare):
 
     :param magicSquare: (list) The matrix to be checked.
 
-    :return: (bool) True if the matrix is a Loshu matrix, else False.
+    :return: (bool) True if the matrix is a Lo shu matrix, else False.
     """
     check, flag = [], True
 
@@ -93,11 +92,11 @@ def checkLoShuMatrix(magicSquare):
     check.append(sumMinorDiagonalElement(magicSquare))
 
     for i in range(1, len(magicSquare)):
-       if magicSquare[i] == magicSquare[0]:
-           continue
-       else:
-           flag = False
-           break
+        if check[i] == check[0]:
+            continue
+        else:
+            flag = False
+            break
     return flag
 
 
@@ -119,7 +118,7 @@ def main():
     # Populates the magicSquare with number numbers from 0 to 9.
     for i in range(row):
         lst = []
-        for i in range(column):
+        for j in range(column):
             lst.append(randint(1, 9))
         magicSquare.append(lst)
 
@@ -139,4 +138,3 @@ def main():
     
 if __name__ == "__main__":
     main()
-
