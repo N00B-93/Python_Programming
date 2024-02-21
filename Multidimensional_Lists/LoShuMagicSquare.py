@@ -120,7 +120,7 @@ def main():
     for i in range(row):
         lst = []
         for i in range(column):
-            lst.append(randint(0, 9))
+            lst.append(randint(1, 9))
         magicSquare.append(lst)
 
     # Displays the generated matrix.
