@@ -1,3 +1,5 @@
+from math import sqrt
+
 """
     This is a program that finds the two nearest points
     in a 3-Dimensional space given a list of 3-dimensional points.
@@ -22,7 +24,7 @@ def distance(x1, x2, y1, y2, z1, z2):
 
     :return: (float) The distance between two 3-dimensional points.
     """
-    return ((x2 - x1)**2 + (y2 - y1)**2) + (z2 - z1)**2
+    return sqrt((x2 - x1)**2 + (y2 - y1)**2 + (z2 - z1)**2)
 
 
 def nearestPoints(points):
@@ -61,7 +63,7 @@ def main():
 
     # Displays the result.
     print("\nThe two nearest points are: ", end="")
-    print(f"({points[idx1][0]}, {points[idx1][1]}), ({points[idx2][0]}, {points[idx2][1]})")
+    print(f"({points[idx1][0]}, {points[idx1][1]}, {points[idx1][2]}), ({points[idx2][0]}, {points[idx2][1]}, {points[idx2][2]})")
 
 
 if __name__ == "__main__":
