@@ -1,5 +1,5 @@
 # Python_Programming
-![](https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Fcomponents%2Fblog_post_page%2Fcontent%2Fcover_image_file%2Fcover_image%2F1317246%2Fretina_500x200_cover-python-design-patterns-dc53d29faeb84911918f0f60d472f35d.png)
+![](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pxfuel.com%2Fen%2Fdesktop-wallpaper-jjqbn&psig=AOvVaw0MP2zqMhk-N0wItoF54q6k&ust=1708897472117000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJjq_4byxYQDFQAAAAAdAAAAABAD)
 
 Welcome to my Python learning repository! Here you'll find a collection of Python programs that I've written while learning the language. Each directory is designed to showcase different concepts and techniques in Python.
 
