@@ -1,5 +1,5 @@
 # Python_Programming
-![](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pxfuel.com%2Fen%2Fdesktop-wallpaper-jjqbn&psig=AOvVaw0MP2zqMhk-N0wItoF54q6k&ust=1708897472117000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJjq_4byxYQDFQAAAAAdAAAAABAD)
+![](https://e0.pxfuel.com/wallpapers/693/944/desktop-wallpaper-python-logo-laptop-full-background-and-python-coding.jpg)
 
 Welcome to my Python learning repository! Here you'll find a collection of Python programs that I've written while learning the language. Each directory is designed to showcase different concepts and techniques in Python.
 
