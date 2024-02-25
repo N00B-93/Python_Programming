@@ -1,5 +1,11 @@
 from sys import exit
 
+"""
+    In one version of Pig Latin, you convert a word by removing the first letter, placing that letter 
+    at the end of the word, and then appending “ay” to the word.
+    This program prompts the user to enter a sentence and then displays the Pig Latin equivalent.
+"""
+
 
 def toPigLatin(string):
     """
