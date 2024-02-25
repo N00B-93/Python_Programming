@@ -9,7 +9,7 @@ from sys import exit
 
 def toPigLatin(string):
     """
-    Converts a given String to it's Pig Latin equivalent.
+    Converts a given String to its Pig Latin equivalent.
     :param string: (str) The String to be converted to Pig Latin.
 
     :return: (str) The Pig Latin equivalent of a String.
@@ -28,7 +28,7 @@ def toPigLatin(string):
 
 def main() -> None:
     # Reads in a sentence.
-    sentence = input("\nEnter a String to be converted: ");
+    sentence = input("\nEnter a String to be converted: ")
     
     # Breaks the sentence into a list of Strings.
     words = sentence.split()
@@ -50,4 +50,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
