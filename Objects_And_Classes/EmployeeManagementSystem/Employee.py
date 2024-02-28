@@ -88,3 +88,12 @@ class Employee:
         :return: None.
         """
         self.__employeeName = employeeName
+
+    def __str__(self):
+        """
+        Returns the string representation of the Employee.
+
+        :return: (str) The string representation of the Employee.
+        """
+        return (f"\nEmployee Name: {self.getEmployeeName()}\nEmployee ID: {self.getEmployeeID()}\n"
+                f"Employee Job Title: {self.getJobTitle()}\n Employee Department: {self.getDepartment()}")
