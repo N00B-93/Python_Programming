@@ -96,4 +96,4 @@ class Employee:
         :return: (str) The string representation of the Employee.
         """
         return (f"\nEmployee Name: {self.getEmployeeName()}\nEmployee ID: {self.getEmployeeID()}\n"
-                f"Employee Job Title: {self.getJobTitle()}\n Employee Department: {self.getDepartment()}")
+                f"Employee Job Title: {self.getJobTitle()}\nEmployee Department: {self.getDepartment()}")
