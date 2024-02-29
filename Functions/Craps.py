@@ -35,6 +35,7 @@ def main():
     # Checks if player wins or loses on the first roll.
     if point == 2 or point == 3 or point == 12:
         print("\nYour rolled ", point, "\nYou LOSE!!!", sep="")
+        exit(0)
     elif point == 7 or point == 11:
         print("\nYou rolled ", point, "\nYou WIN!!!", sep="")
         exit(0)
