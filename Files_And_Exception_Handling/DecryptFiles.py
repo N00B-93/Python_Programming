@@ -43,6 +43,8 @@ def main() -> None:
 
             # Writes the decoded text into the output file.
             fileHandler2.write(chr(decodedText))
+        
+        print(f"\nText decoded and output written to {outputFile}!")
 
         # Closes both files.
         fileHandler1.close()
