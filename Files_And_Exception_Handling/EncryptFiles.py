@@ -46,6 +46,11 @@ def main() -> None:
             # Writes the encoded byte into the output file.
             fileHandler2.write(chr(encodedText))
         print(f"\nText encoded and output written to {outputFile}!")
+
+        # Closes the input and output files.
+        fileHandler1.close()
+        fileHandler2.close()
+
     except Exception as exception:
         print(exception)
         
