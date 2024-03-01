@@ -1,5 +1,5 @@
 """
-    This program prompts the user to enter the name of a file containing an unspecified number of scores
+    This program prompts the user to enter the name of a file containing an unspecified number of scores separated by space
     then determines the total and the average of the scores.
 """
 
