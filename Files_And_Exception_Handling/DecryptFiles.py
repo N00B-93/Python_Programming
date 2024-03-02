@@ -20,12 +20,11 @@ def main() -> None:
     outputFile = input("\nEnter the name of the output file: ")
 
     # Terminates the program if the output file already exist.
-    print(f"\n{outputFile} already exists!")
-    exit(2)
+    if isfile(outputFile):
+        print(f"\n{outputFile} already exists!")
+        exit(2)
 
     try:
-        fileSize = 0
-        
         # Determines the size of the input file.
         with open(inputFile) as fileHandler:
             fileSize = len(fileHandler.read())
@@ -38,7 +37,7 @@ def main() -> None:
             # Reads a byte from the input file.
             inputText = fileHandler1.read(1)
 
-            # Decodes the text by subtracting 5 from it's ASCII value.
+            # Decodes the text by subtracting 5 from its ASCII value.
             decodedText = ord(inputText) - 5 
 
             # Writes the decoded text into the output file.
@@ -55,4 +54,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
