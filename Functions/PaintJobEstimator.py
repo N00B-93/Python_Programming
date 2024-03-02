@@ -1,7 +1,8 @@
 """
     A painting company has determined that for every 112 square feet of wall space, one gallon 
     of paint and eight hours of labor will be required. The company charges $35.00 per hour for labor. 
-    This is a program that asks the user to enter the square feet of wall space to be painted and the price of the paint per gallon.
+    This is a program that asks the user to enter the square feet of wall space to be painted and the price of the paint
+     per gallon.
     Then displays the following information:
     • The number of gallons of paint required
     • The hours of labor required
@@ -13,7 +14,7 @@
 
 def gallonOfPaintRequired(squareFeetOfWall):
     """
-    Returns the number of gallons of paint required given a particular wall size.
+    Returns the number of gallons of paint to be used given a particular wall size.
 
     :param squareFeetOfWall: (float) The square feet of wall to be painted.
 
@@ -24,7 +25,7 @@ def gallonOfPaintRequired(squareFeetOfWall):
 
 def hoursOfLabour(squareFeetOfWall):
     """
-    Returns the number of hours it takes to paint a given squar feet of a wall.
+    Returns the number of hours it takes to paint a given square feet of a wall.
 
     :param squareFeetOfWall: (float) The square feet of wall to be painted.
 
@@ -39,7 +40,7 @@ def costOfPaint(squareFeetOfWall, priceOfPaintPerGallon):
 
     :param squareFeetOfWall: (float) The square feet of wall to be painted.
 
-    :costOfPaintPerGallon: (float) The cost of a gallon of paint.
+    :param priceOfPaintPerGallon: (float) The cost of a gallon of paint.
 
     :return: (float) Total cost to paint a wall of give dimension.
     """
@@ -52,17 +53,17 @@ def labourCharges(squareFeetOfWall):
 
     :param squareFeetOfWall: (float) Size of the wall to be painted.
 
-    :return: (float) Cost of labour to painted a wall of given dimension.
+    :return: (float) Cost of labour to paint a wall of given dimension.
     """
     return hoursOfLabour(squareFeetOfWall) * 35.00
-    
+
 
 def main() -> None:
     # Reads in the Square feet of wall space to be painted and the price of paint per gallon.
     squareFeetOfWall = eval(input("\nEnter the square feet of wall to be painted: "))
     priceOfPaintPerGallon = eval(input("\nEnter the price of paint per gallon: $ "))
 
-    # Displays the nunber of gallons of paint required.
+    # Displays the number of gallons of paint required.
     print(f"\nNumber of gallons of Paint required: {gallonOfPaintRequired(squareFeetOfWall):.2f} gallons")
 
     # Displays the hours of labour required.
@@ -71,13 +72,13 @@ def main() -> None:
     # Displays the cost of paint required.
     print(f"\nCost of Paint: $ {costOfPaint(squareFeetOfWall, priceOfPaintPerGallon):.2f}")
 
-    # Dislays the Labour charges.
+    # Displays the Labour charges.
     print(f"\nThe Labour Charges is: $ {labourCharges(squareFeetOfWall):.2f}")
 
     # Displays the total cost of the paint job.
-    print(f"\nTotal Cost of paint job: $ {labourCharges(squareFeetOfWall) + costOfPaint(squareFeetOfWall, priceOfPaintPerGallon):.2f}")
+    print(f"\nTotal Cost of paint job: $ {labourCharges(squareFeetOfWall) + costOfPaint(squareFeetOfWall,
+                                                                                        priceOfPaintPerGallon):.2f}")
 
 
 if __name__ == "__main__":
     main()
-
