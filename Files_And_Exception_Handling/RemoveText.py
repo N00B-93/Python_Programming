@@ -10,7 +10,6 @@ def main() -> None:
     string = input("\nEnter the String to be removed from the file: ")
 
     try:
-        fileContent, fileHandler  = '', None
         # Reads the content of the file into a String variable.
         with open(fileName, 'r') as fileHandler:
             fileContent = fileHandler.read()
@@ -30,4 +29,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
