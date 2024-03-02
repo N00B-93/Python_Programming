@@ -12,7 +12,6 @@ def countWords(fileName):
 
     :return: (int) Number of words in the file.
     """
-    words = []
     try:
         with open(fileName, 'r') as fileHandler:
             words = (fileHandler.read()).split()
@@ -48,13 +47,13 @@ def main() -> None:
     # Prompts the user to enter the name of the file.
     fileName = input("\nEnter the name of the file: ")
     try:
-
         # Determines the number of Words, Characters and Lines.
         words = countWords(fileName)
         lines, characters = countCharactersAndLines(fileName)
+
         # Prints the number of Characters, Words and Lines.
         print("\nThe file contains: ")
-        print(f"\n{characters} chatacters")
+        print(f"\n{characters} characters")
         print(f"\n{words} words")
         print(f"\n{lines} lines")
     except Exception as exception:
@@ -63,4 +62,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
