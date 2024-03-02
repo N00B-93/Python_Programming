@@ -6,6 +6,7 @@ class Pet:
         name: (str) The name of the Pet.
 
         animalType: (str) The type of animal that the Pet is.
+
         age: (int): The age of the animal.
     """
     def __init__(self, name, animalType, age):
@@ -99,4 +100,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
