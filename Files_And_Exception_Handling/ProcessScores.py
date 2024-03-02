@@ -1,6 +1,6 @@
 """
-    This program prompts the user to enter the name of a file containing an unspecified number of scores separated by space
-    then determines the total and the average of the scores.
+    This program prompts the user to enter the name of a file containing an unspecified number of scores separated by
+    space then determines the total and the average of the scores.
 """
 
 
@@ -8,7 +8,7 @@ def getTotalAndAverage(listOfScores):
     """
     Returns the total and average of a list of scores.
 
-    :param listOfScores: (list) The list of scores to ve processed.
+    :param listOfScores: (list) The list of scores to be processed.
 
     :return: (float), (float) The total and average score.
     """
@@ -16,12 +16,10 @@ def getTotalAndAverage(listOfScores):
 
 
 def main() -> None:
-    # Reads in the bame of the file containing scores.
+    # Reads in the name of the file containing scores.
     fileName = input("\nEnter the name of the file containing scores: ")
 
     try:
-        fileHandler = None
-
         with open(fileName, 'r') as fileHandler:
             # Reads all the scores from the file as a String.
             scores = fileHandler.read()
@@ -46,4 +44,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
