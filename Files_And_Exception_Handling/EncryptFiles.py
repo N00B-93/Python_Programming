@@ -11,7 +11,7 @@ def main() -> None:
     # Reads in the input file name.
     inputFile = input("\nEnter input file name: ")
     
-    # Terminates the program if the input file doesn't exists.
+    # Terminates the program if the input file doesn't exist.
     if not isfile(inputFile):
         print(f"\n{inputFile} doesn't exist!")
         exit(1)
@@ -25,8 +25,6 @@ def main() -> None:
         exit(2)
     
     try:
-        fileSize = 0
-        
         # Determines the size of the input file.
         with open(inputFile) as fileHandler:
             fileContent = fileHandler.read()
@@ -53,7 +51,7 @@ def main() -> None:
 
     except Exception as exception:
         print(exception)
-        
+
+
 if __name__ == "__main__":
     main()
-
