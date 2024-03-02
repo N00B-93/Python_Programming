@@ -24,8 +24,6 @@ def main() -> None:
 
     try:
         # Reads the content of the file into the fileContent variable as a String.
-        fileContent = ''
-
         with open(fileName) as fileHandler:
             fileContent = fileHandler.read()
         
@@ -42,4 +40,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
