@@ -1,9 +1,10 @@
 """
     This is a program that creates three dictionaries;
         1. A dictionary containing course number and room number as key-value pairs.
-        2. A dictionary containing course nunber and instructor names as key-value pairs.
+        2. A dictionary containing course number and instructor names as key-value pairs.
         3. A dictionary containing course number and meeting time as key-value pairs.
-    Then prompts the user to enter a course number and displays the course's room number, instructor name and meeting time.
+    Then prompts the user to enter a course number and displays the course's room number, instructor
+    name and meeting time.
 """
 
 
@@ -36,8 +37,8 @@ def main() -> None:
             }
 
     # Displays the list of courses.
-    print("\n\t\tList of Courses")
-    print("\n\t\tCS101 CS102 CS103 NT110 CM241")
+    print("\n\t\tList of Courses: ", end="")
+    print("CS101 CS102 CS103 NT110 CM241")
 
     # Prompts the user to enter a course number.
     courseNumber = input("\nEnter your course number(e.g., CS101): ")
@@ -48,16 +49,17 @@ def main() -> None:
         # Retrieves the instructors name.
         instructor = instructors.get(courseNumber)
         
-        # Reteieves the lecture time.
+        # Retrieves the lecture time.
         time = meetingTime.get(courseNumber)
         
         # Raises a KeyError if the courseNumber entered by the user is invalid.
-        if roomNumber == instructor == time == None:
+        if roomNumber == instructor == time is None:
             raise KeyError("Invalid course number, Use a valid course number.")
         
         # Displays the course information.
         print("\n\t\tCourse Information")
-        print(f"\nCourse Number: {courseNumber}\nLecture Room Number: {roomNumber}\nCourse Instructor: {instructor}\nLecture Time: {time}")
+        print(f"\nCourse Number: {courseNumber}\nLecture Room Number: {roomNumber}\nCourse Instructor: "
+              f"{instructor}\nLecture Time: {time}")
     except KeyError as keyError:
         print()
         print(keyError)
@@ -65,4 +67,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
