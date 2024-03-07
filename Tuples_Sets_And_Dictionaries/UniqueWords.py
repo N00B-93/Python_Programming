@@ -15,8 +15,6 @@ def main() -> None:
         print(f"\n{fileName} doesn't exist!")
         exit(1)
 
-    wordSet = set()
-
     try:
         # Opens and reads the content of the file.
         with open(fileName) as fileHandler:
@@ -38,4 +36,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
