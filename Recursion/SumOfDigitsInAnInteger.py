@@ -20,7 +20,7 @@ def main() -> None:
     while True:
         try:
             # Prompts the user to enter an integer.
-            number = int(input("\nEnter a number whose digits is to be summed: "))
+            number: int = int(input("\nEnter a number whose digits is to be summed: "))
 
             # Display the sum of digits in the number.
             print(f"\nThe sum of digits in {number} is: ", end="")
