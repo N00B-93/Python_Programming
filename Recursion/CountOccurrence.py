@@ -5,6 +5,15 @@
 
 
 def countOccurrence(string: str, character: str) -> int:
+    """
+    This function counts the occurrences of a character in the string using recursion.
+
+    :param string: (str) The string to count occurrences of the character.
+
+    :param character: (str) The character whose occurrence in the String is top be counted.
+
+    :return: (int) The number of occurrences of the character in the string.
+    """
     if not string:
         return 0
     else:
