@@ -29,9 +29,15 @@ def main() -> None:
             # Displays 0 if index entered by user is 0.
             if number == 0:
                 print(f"\nThe Fibonacci number at index {number} is: 0")
+                break
+            # Displays 1 if index entered by user is 1.
+            elif number == 1:
+                print(f"\nThe Fibonacci number at index {number} is: 1")
+                break
             else:
                 # Displays the Fibonacci number at the index supplied by the user.
                 print(f"\nThe Fibonacci number at index {number} is: {fibonacciWithoutRecursion(number)}")
+                break
         except ValueError:
             print("\nInvalid input. Try again.")
 
