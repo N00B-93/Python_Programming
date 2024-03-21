@@ -4,12 +4,20 @@
 """
 
 
+def decimalToBinaryHelper(number: int, string: str) -> str:
+    if number > 0:
+        remainder = number % 2
+        string += str(remainder)
+        return decimalToBinaryHelper(number // 2, string)
+    else:
+        return string
+
+
 def decimalToBinary(number: int) -> str:
+    binString = ""
     if number == 0:
         return "0"
-    elif number == 1:
-        return "1"
-    return str(number % 2) + decimalToBinary(number // 2)
+    return decimalToBinaryHelper(number, binString)[::-1]
 
 
 def main() -> None:
