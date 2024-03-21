@@ -6,6 +6,13 @@
 # Reads in a decimal number.
 number = int(input("\nEnter a decimal number: "))
 
+if number == 0:
+    print(f"\nThe decimal equivalent of {number} is: 0.")
+    exit(0)
+elif number < 0:
+    print("\nInvalid input, Use positive integers only.")
+    exit(1)
+
 # Preserves the original decimal number in a temporary variable.
 tempVar = number
 
