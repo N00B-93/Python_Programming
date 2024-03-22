@@ -6,8 +6,8 @@
 
 def decimalToBinaryHelper(number: int, string: str) -> str:
     """
-    Recursive helper function that takes a number and a String as input and returns the binary represen
-    tation of the number as a String.
+    Recursive helper function that takes a number and a String as input and returns the binary representation of
+    the number as a String.
 
     :param number: (int) The decimal number to be converted.
 
