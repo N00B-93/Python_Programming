@@ -5,6 +5,16 @@
 
 
 def decimalToBinaryHelper(number: int, string: str) -> str:
+    """
+    Recursive helper function that takes a number and a String as input and returns the binary represen
+    tation of the number as a String.
+
+    :param number: (int) The decimal number to be converted.
+
+    :param string: (str) A String to hold the binary representation of the number.
+
+    :return: (str) The binary representation of the decimal number as a String.
+    """
     if number > 0:
         remainder = number % 2
         string += str(remainder)
@@ -14,6 +24,13 @@ def decimalToBinaryHelper(number: int, string: str) -> str:
 
 
 def decimalToBinary(number: int) -> str:
+    """
+    Returns the binary equivalent of a decimal number by making a call to a recursive helper function.
+
+    :param number: (int) The decimal number to be converted to binary.
+
+    :return: (str) The binary representation of the decimal number as a String.
+    """
     binString = ""
     if number == 0:
         return "0"
