@@ -3,6 +3,7 @@
     problem for that number of disks using recursion.
 """
 
+
 def towerOfHanoi(numberOfDisks: int, srcRod: int, auxRod: int, destRod: int) -> None:
     """
     This solves the Tower of Hanoi puzzle recursively.
@@ -10,11 +11,11 @@ def towerOfHanoi(numberOfDisks: int, srcRod: int, auxRod: int, destRod: int) -> 
 
     :param srcRod: (int) The source rod from which the disks are moved.
 
-    :param auxRod: (int) The auxilliary rod used for intermediate moves.
+    :param auxRod: (int) The auxiliary rod used for intermediate moves.
 
     :param destRod: (int) The destination rod to which the disks are moved.
     """
-    if (numberOfDisks > 0):
+    if numberOfDisks > 0:
         towerOfHanoi(numberOfDisks - 1, srcRod, destRod, auxRod)
         print(f"\nMove disk {numberOfDisks} from Rod {srcRod} to Rod {destRod}")
         towerOfHanoi(numberOfDisks - 1, auxRod, srcRod, destRod)
@@ -40,4 +41,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
