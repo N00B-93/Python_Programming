@@ -33,5 +33,3 @@ numberOfGrapevinesInARow = (lengthOfRow - 2 * amountOfSpaceUsedByEndPost) / amou
 
 # Displays the result.
 print(f"\nThe amount of grapevines in the row is {int(numberOfGrapevinesInARow)} grapevines.")
-
-

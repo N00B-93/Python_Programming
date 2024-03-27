@@ -31,11 +31,10 @@ def main() -> None:
         print("\nInvalid input, Use a String with length greater than 1.")
         string = input("\nEnter a String to be capitalized: ")
 
-    # Diaplays the original String and the Capitalized String.
+    # Displays the original String and the Capitalized String.
     print(f"\nOriginal String: {string}")
     print(f"\nCapitalized String: {capitalize(string)}")
 
 
 if __name__ == "__main__":
     main()
-
