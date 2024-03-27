@@ -1,4 +1,4 @@
-from math import sin, cos
+from math import sin, cos, radians
 
 """
     This is a program that prints the sin and cos 
@@ -7,5 +7,5 @@ from math import sin, cos
 
 # Displays the result.
 print("\nDegree\t\tSin\t\tCos")
-for angle in range(0, 360, 10):
-    print(f"{angle}\t\t{sin(angle):.4f}\t\t{cos(angle):.4f}")
+for angle in range(0, 370, 10):
+    print(f"{angle}\t\t{sin(radians(angle)):.4f}\t\t{cos(radians(angle)):.4f}")
