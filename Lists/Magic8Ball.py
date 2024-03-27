@@ -1,7 +1,7 @@
 from random import randint
 
 """
-    This is a program that sumulates a Magic 8 Ball, which is a fortune-telling toy that displays a 
+    This is a program that simulates a Magic 8 Ball, which is a fortune-telling toy that displays a 
 random response to a yes or no question.
     The program prompts the user to ask a question and then generates a random answer to the question.
     The program continues to prompt the user to ask a question till he/she quits.
@@ -9,12 +9,10 @@ random response to a yes or no question.
 
 
 def main() -> None:
-    # Creates an empty list to hold responses.
-    responses: list = list()
 
     # Opens the response.txt file, reads the responses into a list and closes the file.
     with open("response.txt") as fileHandler:
-        responses = fileHandler.readlines()
+        responses: list = fileHandler.readlines()
 
     while True:
         # Prompts the user to ask a question.
@@ -24,10 +22,9 @@ def main() -> None:
         if question == "0":
             break
 
-        # Display a reponse to the user's question.
+        # Display a response to the user's question.
         print("\n" + responses[randint(0, 12)])
 
 
 if __name__ == "__main__":
     main()
-
