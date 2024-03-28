@@ -27,4 +27,3 @@ while decimal > 0:
 
 # Displays the result.
 print(f"\nThe hexadecimal equivalent of {tempVar} is: {hexNumber[::-1]}")
-
