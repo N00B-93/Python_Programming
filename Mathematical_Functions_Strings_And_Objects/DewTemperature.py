@@ -17,11 +17,11 @@ relativeHumidity = float(input("\nEnter a relative humidity in the range 0.0 <= 
 temperature = float(input("\nEnter the temperature in ° C: "))
 
 # Determines the value of f(T, RH)
-f = (a * temperature / (b + temperature)) * log(relativeHumidity, e)
+f = (a * temperature / (b + temperature)) + log(relativeHumidity, e)
 
 # Determines the dew point temperature.
 dewPointTemperature = b * f / (a - f)
 
 # Displays the result.
-print(f"\nThe dew point temperature is: {dewPointTemperature:.2f}")
+print(f"\nThe dew point temperature is: {dewPointTemperature:.2f}° C")
 
