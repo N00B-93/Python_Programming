@@ -4,8 +4,8 @@
 """
 
 
-# The permutivity of free space constant.
-PERMUTIVITY_OF_FREE_SPACE = 8.854e-12
+# The permittivity of free space constant.
+PERMITTIVITY_OF_FREE_SPACE = 8.854e-12
 
 # Reads in the magnitude of the first charge.
 q1 = float(input("\nEnter the value of the first charge: "))
@@ -17,7 +17,7 @@ q2 = float(input("\nEnter the value of the second charge: "))
 r = float(input("\nEnter the distance between the charges: "))
 
 # Calculates the force of attraction(or repulsion) between charges.
-forceBetweenCharges = (PERMUTIVITY_OF_FREE_SPACE * q1 * q2) / r
+forceBetweenCharges = (PERMITTIVITY_OF_FREE_SPACE * q1 * q2) / r
 
 # Displays the result.
 if forceBetweenCharges > 0:

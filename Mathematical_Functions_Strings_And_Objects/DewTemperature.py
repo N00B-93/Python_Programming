@@ -2,7 +2,7 @@ from math import log, e
 
 """
     This is a program that prompts the user to enter the relative humidity RH and temperature T in degrees and
-    displays the dew point temperature using the formular:
+    displays the dew point temperature using the formula:
             Td = b * f(T, RH) / (a - f(T, RH)), where
             f(T, RH) = (a * T / b + T)In(RH), where a = 17.2 and b = 237.7° C.
 """
@@ -24,4 +24,3 @@ dewPointTemperature = b * f / (a - f)
 
 # Displays the result.
 print(f"\nThe dew point temperature is: {dewPointTemperature:.2f}° C")
-

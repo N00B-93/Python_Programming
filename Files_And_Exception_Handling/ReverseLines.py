@@ -1,4 +1,4 @@
-from os import remove, rename
+from os import rename
 from sys import argv
 from os.path import exists
 
@@ -14,7 +14,7 @@ def main() -> None:
         print("\nUsage: python Reverse.py fileName")
         exit(1)
 
-    # Displays an error message and terminates the program if the file to be reversed does't exist.
+    # Displays an error message and terminates the program if the file to be reversed doesn't exist.
     if not exists(argv[1]):
         print(f"\n{argv[1]} doesn't exists")
         exit(2)
@@ -38,4 +38,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
