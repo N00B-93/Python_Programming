@@ -10,7 +10,7 @@ def main() -> None:
     # Reads in the name or path of the first file.
     file1: str = input("\nEnter the name or path of the first file: ")
 
-    # Displays an error message and terminates the program if the first file doesn't exists.
+    # Displays an error message and terminates the program if the first file doesn't exist.
     if not exists(file1):
         print(f"\n{file1} doesn't exists!!!")
         exit(1)
@@ -18,7 +18,7 @@ def main() -> None:
     # Reads in the name or path of the second file.
     file2: str = input("\nEnter the name or path of the second file: ")
 
-    # Displays an error message and terminates the program if the second file doesn't exists.
+    # Displays an error message and terminates the program if the second file doesn't exist.
     if not exists(file2):
         print(f"\n{file2} doesn't exists!!!")
         exit(2)
@@ -33,7 +33,7 @@ def main() -> None:
             file2Content: set = set(fileHandler2.read().split())
         
         # Creates a set of words common to both files.
-        generalUniqueWords = file1Content.intersection(file2Content)
+        generalUniqueWords: set = file1Content.intersection(file2Content)
         
         # Converts the set of common words to a list.
         generalUniqueWords: list = list(generalUniqueWords)
@@ -49,6 +49,6 @@ def main() -> None:
     except Exception as exception:
         print(exception.__str__())
 
+
 if __name__ == "__main__":
     main()
-
