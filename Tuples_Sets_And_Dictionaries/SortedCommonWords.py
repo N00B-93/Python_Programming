@@ -10,7 +10,7 @@ def main() -> None:
     # Reads in the name or path of the first file.
     file1: str = input("\nEnter the name or path of the first file: ")
 
-    # Displays an error message and teminates the program if the first file doesn't exists.
+    # Displays an error message and terminates the program if the first file doesn't exists.
     if not exists(file1):
         print(f"\n{file1} doesn't exists!!!")
         exit(1)
@@ -18,9 +18,9 @@ def main() -> None:
     # Reads in the name or path of the second file.
     file2: str = input("\nEnter the name or path of the second file: ")
 
-    # Displays an error message and teminates the program if the second file doesn't exists.
-    if not exists(file1):
-        print(f"\n{file1} doesn't exists!!!")
+    # Displays an error message and terminates the program if the second file doesn't exists.
+    if not exists(file2):
+        print(f"\n{file2} doesn't exists!!!")
         exit(2)
 
     try:
