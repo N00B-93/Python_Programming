@@ -11,7 +11,7 @@ from math import log, e
 a, b = 17.2, 237.7
 
 # Reads in the relative humidity, RH.
-relativeHumidity = float(input("\nEnter a relative humidity in the range 0.0 <= RH < 1.0: "))
+relativeHumidity = float(input("\nEnter a relative humidity in the range 0.0 <= RH <= 1.0: "))
 
 # Reads in the temperature in ° C.
 temperature = float(input("\nEnter the temperature in ° C: "))
