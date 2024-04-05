@@ -184,6 +184,6 @@ def main() -> None:
             case _:
                 print("\nInvalid input, Try again.")
 
-                     
+
 if __name__ == "__main__":
     main()
