@@ -181,10 +181,9 @@ def main() -> None:
             case "6":
                 print("\nExiting...")
                 exit(0)
-
             case _:
                 print("\nInvalid input, Try again.")
 
-            
+                     
 if __name__ == "__main__":
     main()
