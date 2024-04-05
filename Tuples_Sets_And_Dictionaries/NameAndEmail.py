@@ -112,7 +112,7 @@ def showAllContacts() -> None:
 
 def main() -> None:
     # Creates a dictionary that stores names and emails as key, value pairs.
-    namesAndEmails: dict = {"Name": 2233}
+    namesAndEmails: dict = {}
 
     if not exists("namesAndEmails.pickle"):
         # Creates a file to store names and emails.
@@ -182,6 +182,7 @@ def main() -> None:
                 print("\nExiting...")
                 exit(0)
 
-
+            case _:
+                print("\nInvalid input, Try again.")
 if __name__ == "__main__":
     main()
