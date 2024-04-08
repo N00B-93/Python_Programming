@@ -1,4 +1,4 @@
-from os import rename
+from os import rename, remove
 from sys import argv
 from os.path import exists
 
@@ -24,14 +24,19 @@ def main() -> None:
         with open(argv[1]) as fileHandler1:
             # Reads out all the contents of the file into a list.
             fileContent: list = fileHandler1.readlines()
-            
+
             # Opens a new file and copies the reversed content of the original file into it.
             with open("__tempFile__", "w") as fileHandler2:
                 [fileHandler2.write(line[::-1]) for line in fileContent]
 
-                rename("__tempFile__", argv[1])
+        # Deletes the original file.
+        remove(argv[1])
 
-                print(f"\nThe content of {argv[1]} has been reversed successfully!")
+        # Renames the temporary file to the original file.
+        rename("__tempFile__", argv[1])
+
+        # Displays a message informing the user that the file has been reversed.
+        print(f"\nThe content of {argv[1]} has been reversed successfully!")
     except Exception as exception:
         print(exception.__str__())
 
