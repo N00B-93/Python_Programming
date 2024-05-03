@@ -1,7 +1,7 @@
 from math import pow
 
 """
-    This program prompts the user to enter a temperature between and
+    This program prompts the user to enter a temperature between -58°F and
     41°F and a wind speed greater than or equal to 2 and displays the wind-chill temperature.
 """
 
