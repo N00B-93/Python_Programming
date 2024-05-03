@@ -6,7 +6,7 @@ from math import pow
 """
 
 # Reads in thr final account value.
-finalAccountValue = float(input("\nEnter the final account value: "))
+finalAccountValue = float(input("\nEnter the final account value: $"))
 
 # Reads in the annual interest rate in %
 annualInterestRate = float(input("\nEnter the annual interest rate: ")) / 100.0
@@ -21,4 +21,4 @@ monthlyInterestRate = annualInterestRate / 12
 initialDeposit = finalAccountValue / (pow(1 + monthlyInterestRate, years * 12))
 
 # Displays the result.
-print(f"\nThe initial deposit value is {initialDeposit:.2f}")
+print(f"\nThe initial deposit value is: ${initialDeposit:.2f}")
