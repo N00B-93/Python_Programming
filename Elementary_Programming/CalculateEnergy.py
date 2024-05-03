@@ -7,10 +7,10 @@
 waterAmount = float(input("\nEnter the amount of water in kg: "))
 
 # Reads in the initial Temperature.
-initialTemperature = float(input("Enter the initial temperature: "))
+initialTemperature = float(input("Enter the initial temperature in Celsius: "))
 
 # Reads in the final temperature.
-finalTemperature = float(input("Enter the final temperature: "))
+finalTemperature = float(input("Enter the final temperature in Celsius: "))
 
 # Calculates the total energy.
 totalEnergy = waterAmount * (finalTemperature - initialTemperature) * 4184
