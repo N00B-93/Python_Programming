@@ -16,9 +16,9 @@ salesCharge = 0.07 * foodCharge
 totalExpenditure = foodCharge + tip + salesCharge
 
 # Displays the Receipt.
-print("\n************Receipt************")
-print(f"\n\t\tFood Charge: $ {foodCharge:.2f}")
-print(f"\n\t\tTip: $ {tip:.2f}")
-print(f"\n\t\tSales Charge: $ {salesCharge:.2f}")
-print(f"\n\t\tTotal Expenditure: $ {totalExpenditure:.2f}")
-print("\n*******************************")
+print("\n****************Receipt****************")
+print(f"\n\tFood Charge: $ {foodCharge:.2f}")
+print(f"\n\tTip: $ {tip:.2f}")
+print(f"\n\tSales Charge: $ {salesCharge:.2f}")
+print(f"\n\tTotal Expenditure: $ {totalExpenditure:.2f}")
+print("\n***************************************")
