@@ -1,6 +1,6 @@
 """
     This is a program that prompts the user to enter a temperature
-    in Celsius and then converts it to Fahrenheit then displays the result.
+    in Celsius, converts it to Fahrenheit and then displays the result.
 """
 
 # Prompts the user to enter Celsius temperature.
