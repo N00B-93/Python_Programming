@@ -2,7 +2,7 @@ from math import sqrt, pi
 
 """
     This is a program that prompts the user to enter a frequency f, maximum capacitance Cmax, and minimum capacitance 
-    Cmin and the displays the inductance L, and the frequency range to which the circuit can be tuned by varying the 
+    Cmin and then displays the inductance L, and the frequency range to which the circuit can be tuned by varying the 
     capacitance.
     The formula for the Inductance, fmin and fmax are;
             L = (2π / f) ^ 2 / C, where C = √Cmin * √Cmax 
