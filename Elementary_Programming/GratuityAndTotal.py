@@ -4,10 +4,10 @@
 """
 
 # Reads in the subtotal.
-subtotal = float(input("\nEnter the subtotal: "))
+subtotal = float(input("\nEnter the subtotal: $ "))
 
 # Reads in the gratuity rate.
-gratuityRate = float(input("\nEnter the gratuity rate: "))
+gratuityRate = float(input("\nEnter the gratuity rate(e.g 3%): "))
 
 # Calculates the total.
 total = subtotal + subtotal * (gratuityRate / 100)
@@ -16,5 +16,5 @@ total = subtotal + subtotal * (gratuityRate / 100)
 gratuity = subtotal * (gratuityRate / 100)
 
 # Displays the results.
-print(f"\nGratuity = {gratuity:.2f}")
-print(f"\nTotal = {total:.2f}")
+print(f"\nGratuity = ${gratuity:.2f}")
+print(f"\nTotal = ${total:.2f}")
