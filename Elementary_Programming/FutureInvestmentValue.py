@@ -1,12 +1,12 @@
 from math import pow
 
 """
-   This is a program that reads in an investment amount, th e annual interest rate,
+   This is a program that reads in an investment amount, the annual interest rate,
    and the number of years, and displays the future investment value.
 """
 
 # Reads in the investment amount.
-investmentAmount = float(input("\nEnter the investment amount: "))
+investmentAmount = float(input("\nEnter the investment amount: $ "))
 
 # Reads in the annual interest rate.
 annualInterestRate = float(input("\nEnter the annual interest rate: ")) / 100.0
@@ -21,4 +21,4 @@ monthlyInterestRate = annualInterestRate / 12
 futureInvestmentValue = investmentAmount * pow(1 + monthlyInterestRate, years * 12)
 
 # Displays the result.
-print(f"\nAccumulated value is: {futureInvestmentValue:.2f}")
+print(f"\nAccumulated value is: ${futureInvestmentValue:.2f}")
