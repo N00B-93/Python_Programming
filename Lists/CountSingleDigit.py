@@ -25,13 +25,13 @@ def main():
     numbers = []
 
     # Append 100 integers in the range 0 to 9 to the list.
-    for i in range(100):
+    for i in range(1000):
         numbers.insert(i, randint(0, 9))
 
     # Displays each numbers and it's frequency of occurrence.
     print("\nNumber\t\tNumber of Occurrences")
     for i in range(10):
-        print(f"{i}\t\t{countOccurrence(i, numbers):25}")
+        print(f"{i}\t\t{countOccurrence(i, numbers):21}")
 
 
 if __name__ == "__main__":
