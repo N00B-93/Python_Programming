@@ -19,7 +19,7 @@ def average(scores):
 
 def main():
     # Reads in a list of numbers as a String.
-    scoreString = input("\nEnter a list of scores separated by one space: ")
+    scoreString = input("\nEnter a list of scores separated by one space: ").strip()
 
     # Converts the string of numbers to a list of numbers.
     scores = scoreString.split()
