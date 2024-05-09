@@ -11,8 +11,8 @@ from sys import exit
 
 def main():
     # Prompts the user to enter two Strings to be compared.
-    string1 = input("\nEnter the first string: ")
-    string2 = input("\nEnter the second string: ")
+    string1 = input("\nEnter the first string: ").strip()
+    string2 = input("\nEnter the second string: ").strip()
     
     # Terminates the program if the Strings have unequal lengths.
     if len(string1) != len(string2):
