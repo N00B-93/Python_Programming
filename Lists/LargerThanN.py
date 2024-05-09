@@ -23,9 +23,8 @@ def largerThanN(numberList: list, number: int) -> None:
         return
 
     print(f"\nThe numbers greater that {number} in the list are: ", end="")
-    for i in range(startPoint, len(numberList)):
-        if numberList[i] > number:
-            print(f"{numberList[i]} ", end="")
+    for i in range(startPoint + 1, len(numberList)):    
+        print(f"{numberList[i]} ", end="")
 
 
 def main() -> None:
