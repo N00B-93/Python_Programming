@@ -8,7 +8,7 @@
 """
 
 
-def getNameOfBestCustomer(purchaseAmount: [float], customersNames: [str]) -> list[str]:
+def getNamesOfBestCustomers(purchaseAmount: [float], customersNames: [str]) -> list[str]:
     """
     This determines the customer(s) that has the highest purchase amount's name.
 
@@ -52,7 +52,7 @@ def main() -> None:
         customersNames.append(name)
     
     # Determines the customers with the highest purchase amounts.
-    bestCustomers = getNameOfBestCustomer(purchaseAmount, customersNames)
+    bestCustomers = getNamesOfBestCustomers(purchaseAmount, customersNames)
 
     # Displays the customers with the highest purchase amount.
     print("\nCustomer(s) with the highest purchase amount are: ")
