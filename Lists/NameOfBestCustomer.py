@@ -1,11 +1,14 @@
 
 """
-    A supermarket wants to reward its best customer of each day, showing the customer’s name on a screen in the supermarket. For that purpose, the customer’s purchase 
-    amount is stored in a list and the customer’s name is stored in a corresponding list. 
-    This is a program prompts the cashier to enter all prices and names, adds them to two lists, input stops when the cashier enters 0 as purchase amount and the customer with the largest purchase is displayed.
+    A supermarket wants to reward its best customer of each day, showing the customer’s name on a screen
+    in the supermarket. For that purpose, the customer’s purchase amount is stored in a list and the
+    customer’s name is stored in a corresponding list.
+    This is a program prompts the cashier to enter all prices and names, adds them to two lists, input
+    stops when the cashier enters 0 as purchase amount and the customer with the largest purchase is displayed.
 """
 
-def getNameOfBestCustomer(purchaseAmount: [float], customerName: [str]) -> list[str]:
+
+def getNameOfBestCustomer(purchaseAmount: [float], customersNames: [str]) -> list[str]:
     """
     This determines the customer(s) that has the highest purchase amount's name.
 
@@ -13,11 +16,9 @@ def getNameOfBestCustomer(purchaseAmount: [float], customerName: [str]) -> list[
     :param customersNames: (list) A list containing customers names.
     :return: (list) The name of the customer(s) with the highest purchase amount.
     """
-    bestCustomers: list[str] = []
-
     maxPurchase = max(purchaseAmount)
 
-    bestCustomers = [customerName[name] for name, purchase in enumerate(purchaseAmount) if purchase == maxPurchase]
+    bestCustomers = [customersNames[name] for name, purchase in enumerate(purchaseAmount) if purchase == maxPurchase]
 
     return bestCustomers
 
@@ -25,7 +26,7 @@ def getNameOfBestCustomer(purchaseAmount: [float], customerName: [str]) -> list[
 def main() -> None:
     # List to hold purchase amount and customer's names.
     purchaseAmount: [float] = []
-    customerName: [str] = []
+    customersNames: [str] = []
     
     # Continues to prompt the cashier to enter name and purchase amount till the cashier enters a purchase amount of 0.
     print("\nEnter purchase amounts and customer names (enter 0 as purchase amount to stop)")
@@ -48,10 +49,10 @@ def main() -> None:
         
         # Appends the customer's name and purchase amount to the name and purchase amount list.
         purchaseAmount.append(amount)
-        customerName.append(name)
+        customersNames.append(name)
     
-    # Determines the customers with highest purchase amounts.
-    bestCustomers = getNameOfBestCustomer(purchaseAmount, customerName)
+    # Determines the customers with the highest purchase amounts.
+    bestCustomers = getNameOfBestCustomer(purchaseAmount, customersNames)
 
     # Displays the customers with the highest purchase amount.
     print("\nCustomer(s) with the highest purchase amount are: ")
@@ -60,4 +61,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
