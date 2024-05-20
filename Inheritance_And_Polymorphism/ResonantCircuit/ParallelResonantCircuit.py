@@ -10,7 +10,7 @@ class ParallelResonantCircuit(ResonantCircuit):
 
         k (float): The gain at Resonant Frequency.
 
-        B (float): The band width.
+        B (float): The bandwidth.
 
         R (float): The resistance of the circuit.
 
