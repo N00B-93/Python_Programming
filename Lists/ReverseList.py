@@ -1,6 +1,6 @@
 """
     This is a program that prompts the user to enter a list of numbers and reverses the
-    list using a function with the header;
+    list in place using a function with the header;
             def reverseList(lst)
 """
 
@@ -11,9 +11,16 @@ def reverseList(lst):
 
     :param lst: (list) The list to be reversed.
 
-    :return: (list) The reverse of the list.
+    :return: (list) The reversed list.
     """
-    return lst[::-1]
+    i, j = 0, len(lst) - 1
+
+    while i < len(lst) / 2:
+        lst[i], lst[j] = lst[j], lst[i]
+        i += 1
+        j -= 1
+
+    return lst
 
 
 def main():
