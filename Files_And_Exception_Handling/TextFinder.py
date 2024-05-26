@@ -21,11 +21,12 @@ def main() -> None:
                 for line in fileHandler:
                     if line.__contains__(argv[1]):  # Appends a line of text to the textAndFilename list if it contains
                         # the specified word.
-                        textAndFilename.append(fileHandler.name + ": " + line)
+                        textAndFilename.append(fileHandler.name + ": " + line.strip())
     except Exception as exception:
         print(exception.__str__())
 
     # Displays all occurrence of the word in the files.
+    print()
     for item in textAndFilename:
         print(item)
 
