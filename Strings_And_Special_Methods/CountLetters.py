@@ -26,7 +26,7 @@ def main():
     # Prompts the user to enter a string.
     string = input("\nEnter a string: ")
     
-    # Displays an error message an continue to prompt the user to enter a non-empty string.
+    # Displays an error message and continue to prompt the user to enter a non-empty string.
     while string == '':
         print("\nError: Use non empty strings containing letters only, Try again.")
         string = input("\nEnter a string: ")

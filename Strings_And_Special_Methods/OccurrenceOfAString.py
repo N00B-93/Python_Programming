@@ -50,7 +50,6 @@ def main():
             break
         else:
             print("\nError: Use non empty Strings only, Try again.")
-        
 
     # Displays the result.
     print(f"\nThe number of occurrences of '{s2}' in '{s1}' is: {count(s1, s2)}")

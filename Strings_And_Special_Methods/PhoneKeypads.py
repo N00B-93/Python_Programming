@@ -9,7 +9,7 @@ def getNumber(letter):
     """
     Returns the numeric value of the given letter.
 
-    :param uppercaseLetter: (str) The letter whose numeric value should be returned.
+    :param letter: (str) The letter whose numeric value should be returned.
 
     :return: (str) The numeric value of the given letter.
     """
@@ -30,6 +30,7 @@ def getNumber(letter):
     elif letter in "wxyzWXYZ":
         return "9"
     return ""
+
 
 def main():
     # Reads in a phone Number.
