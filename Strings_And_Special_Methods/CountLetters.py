@@ -17,13 +17,19 @@ def countLetters(string):
 
     for character in string:
         # Increments letterCounter if character is a letter.
-        if 91 <= ord(character) <= 122 or 65 <= ord(character) <= 90:
+        if character.isalpha():
             letterCounter += 1
     return letterCounter
 
 
 def main():
+    # Prompts the user to enter a string.
     string = input("\nEnter a string: ")
+    
+    # Displays an error message an continue to prompt the user to enter a non-empty string.
+    while string == '':
+        print("\nError: Use non empty strings containing letters only, Try again.")
+        string = input("\nEnter a string: ")
 
     print(f"\nNumber of letters in '{string}' is: {countLetters(string)}")
 
