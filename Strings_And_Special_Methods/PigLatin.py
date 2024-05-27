@@ -23,6 +23,9 @@ def toPigLatin(string):
     for i in range(len(letters)):
         pigLatin += letters[i]
 
+    if pigLatin.isupper():
+        return pigLatin + 'AY '
+
     return pigLatin + 'ay '
 
 
