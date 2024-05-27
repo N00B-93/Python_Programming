@@ -27,7 +27,7 @@ def main() -> None:
     string: str = input("\nEnter a String to be capitalized: ")
     
     # Continues to loop till the user enters a String whose length is greater than 1.
-    while len(string) < 1:
+    while string == '':
         print("\nInvalid input, Use a String with length greater than 1.")
         string = input("\nEnter a String to be capitalized: ")
 
