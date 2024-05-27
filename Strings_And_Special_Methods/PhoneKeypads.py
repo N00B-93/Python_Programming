@@ -5,7 +5,7 @@
 """
 
 
-def getNumber(uppercaseLetter):
+def getNumber(letter):
     """
     Returns the numeric value of the given letter.
 
@@ -13,23 +13,23 @@ def getNumber(uppercaseLetter):
 
     :return: (str) The numeric value of the given letter.
     """
-    if uppercaseLetter in "abcABC":
+    if letter in "abcABC":
         return "2"
-    elif uppercaseLetter in "defDEF":
+    elif letter in "defDEF":
         return "3"
-    elif uppercaseLetter in "ghiGHI":
+    elif letter in "ghiGHI":
         return "4"
-    elif uppercaseLetter in "jklJKL":
+    elif letter in "jklJKL":
         return "5"
-    elif uppercaseLetter in "mnoMNO":
+    elif letter in "mnoMNO":
         return "6"
-    elif uppercaseLetter in "pqrsPQRS":
+    elif letter in "pqrsPQRS":
         return "7"
-    elif uppercaseLetter in "tuvTUV":
+    elif letter in "tuvTUV":
         return "8"
-    elif uppercaseLetter in "wxyzWXYZ":
+    elif letter in "wxyzWXYZ":
         return "9"
-
+    return ""
 
 def main():
     # Reads in a phone Number.
@@ -45,7 +45,8 @@ def main():
         elif character.isalpha():
             newPhoneNumber += getNumber(character)
         else:
-            continue
+            newPhoneNumber += character
+
     # Displays the result.
     print(f"\nPhone Number: {newPhoneNumber}")
 
