@@ -31,11 +31,17 @@ def isSubString(mainString: str, otherString: str) -> bool:
 
 
 def main() -> None:
-    # Prompts the user to enter a String.
-    mainString: str = input("\nEnter a String: ").strip()
+    while True:
+        # Prompts the user to enter a String.
+        mainString: str = input("\nEnter a String: ").strip()
 
-    # Prompts the user to enter the sub String to be searched for.
-    subString: str = input("\nEnter the sub String to be searched for: ").strip()
+        # Prompts the user to enter the sub String to be searched for.
+        subString: str = input("\nEnter the sub String to be searched for: ").strip()
+
+        if mainString != "" and subString != "":
+            break
+        else:
+            print("\nError: Use non empty Strings only, Try again.")
 
     # Displays the result.
     print(f"\nIs '{subString}' a substring of '{mainString}'? {isSubString(mainString, subString)}")
