@@ -41,9 +41,16 @@ def count(s1, s2):
 
 
 def main():
-    # Reads in two Strings.
-    s1 = input("\nEnter the first string: ")
-    s2 = input("\nEnter the second string: ")
+    while True:
+        # Reads in two Strings.
+        s1 = input("\nEnter the first string: ")
+        s2 = input("\nEnter the second string: ")
+
+        if s1 != "" and s2 != "":
+            break
+        else:
+            print("\nError: Use non empty Strings only, Try again.")
+        
 
     # Displays the result.
     print(f"\nThe number of occurrences of '{s2}' in '{s1}' is: {count(s1, s2)}")
