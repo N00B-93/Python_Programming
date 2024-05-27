@@ -23,12 +23,18 @@ def prefix(s1, s2):
 
 
 def main():
-    # Reads in two Strings.
-    string1 = input("\nEnter the first string: ")
-    string2 = input("\nEnter the second string: ")
+    while True:
+        # Reads in two Strings.
+        string1 = input("\nEnter the first string: ")
+        string2 = input("\nEnter the second string: ")
+
+        if string1 != "" and string2 != "":
+            break
+        else:
+            print("\nError: Use non empty Strings only, Try again.")
 
     # Display their largest common prefix.
-    print(f"\nThe largest common prefix is: {prefix(string1, string2)}")
+    print(f"\nThe largest common prefix is: '{prefix(string1, string2)}'")
 
 
 if __name__ == "__main__":
