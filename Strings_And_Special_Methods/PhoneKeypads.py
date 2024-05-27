@@ -35,6 +35,11 @@ def main():
     # Reads in a phone Number.
     phoneNumber = input("\nEnter your phone number: ")
 
+    # Displays an error message and continue to loop if the user enters an empty string.
+    while phoneNumber == "":
+        print("\nError: Use non empty strings as phone number only, Try again.")
+        phoneNumber = input("\nEnter your phone number: ")
+
     # Initializes a newPhoneNumber variable as a string.
     newPhoneNumber = ""
 
