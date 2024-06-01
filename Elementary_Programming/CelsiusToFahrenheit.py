@@ -4,7 +4,7 @@
 """
 
 # Prompts the user to enter Celsius temperature.
-celsius = eval(input("\nEnter Celsius Temperature: "))
+celsius = float(input("\nEnter Celsius Temperature: "))
 
 # Calculate the Fahrenheit equivalent.
 fahrenheit = 9 / 5 * celsius + 32
