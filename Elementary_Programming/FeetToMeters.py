@@ -10,4 +10,4 @@ feet = float(input("\nEnter the length in feet: "))
 meter = feet * 0.305
 
 # Displays the result.
-print(f"\n{feet} feet is {meter} meters")
+print(f"\n{feet} feet is {meter:.2f} meters")
