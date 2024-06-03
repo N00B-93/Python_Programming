@@ -14,5 +14,5 @@ print(f"\nIs {number} divisible by 5 and 6? {number % 5 == 0 and number % 6 == 0
 print(f"\nIs {number} divisible by 5 or 6? {number % 5 == 0 or number % 6 == 0}")
 
 # Checks if the number entered is divisible by 5 or 6, but not both.
-print(f"\nIs {number} divisible by 5 or 6 but not both? {(number % 5 == 0 or number % 6 == 0)
-                                                         and not (number % 5 == 0 and number % 6 == 0)}")
+print(f"\nIs {number} divisible by 5 or 6 but not both? "
+      f"{(number % 5 == 0 or number % 6 == 0) and not (number % 5 == 0 and number % 6 == 0)}")
