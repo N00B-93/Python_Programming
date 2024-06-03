@@ -5,6 +5,20 @@
 """
 
 
+def checkBinaryString(binaryValue):
+    """
+    Checks if the binary value is valid.
+
+    :param binaryValue: The binary value to be checked.
+
+    :return: (bool) True if the binary value is valid, otherwise False.
+    """
+    for character in binaryValue:
+        if character not in "01":
+            return False
+    return True
+
+
 def binaryToDecimal(binaryString):
     """
     Convert a binary string to a decimal number.
@@ -28,6 +42,11 @@ def binaryToDecimal(binaryString):
 def main():
     # Reads in a binary string.
     binaryString = input("\nEnter a binary string: ")
+
+    # Checks if the binary string entered by the user is valid.
+    if not checkBinaryString(binaryString):
+        print("\nInvalid binary string!")
+        exit(1)
 
     # Converts the binary string to decimal and displays the result.
     print(f"\nThe decimal equivalent of '{binaryString}' is: {binaryToDecimal(binaryString)}")
