@@ -1,12 +1,19 @@
+"""
+    This is a program that prompts the user to enter the value for milliseconds and then
+    displays a string in the format of hour:minutes:seconds by using a function with the header;
+                    def convertMillis(millis)
+"""
+
+
 def convertMillis(milliSeconds):
     """
     Converts milliseconds to hours:minutes:seconds format.
 
     Args:
-    milliSeconds (int): The input milliseconds to be converted.
+        milliSeconds (float): The input milliseconds to be converted.
 
     Returns:
-    str: A string representing the time in the format 'hour:minute:second'.
+        str: A string representing the time in the format 'hour:minute:second'.
     """
 
     # Calculate the time components: hours, minutes, and seconds
@@ -19,7 +26,7 @@ def convertMillis(milliSeconds):
     hour = minute // 60
 
     # Return the time in the format 'hour:minute:second' as a string
-    return str(hour) + ":" + str(currentMinute) + ":" + str(currentSecond)
+    return str(int(hour)) + ":" + str(int(currentMinute)) + ":" + str(int(currentSecond))
 
 
 def main():
@@ -28,7 +35,7 @@ def main():
     """
 
     # Get user input for milliseconds
-    millis = eval(input("\nEnter milliseconds to be converted: "))
+    millis = float(input("\nEnter milliseconds to be converted: "))
 
     # Display the converted time in hours:minutes:seconds format
     print("\n", millis, " converted to hours:minutes:seconds is: ", convertMillis(millis), sep="")
@@ -36,4 +43,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
