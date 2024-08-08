@@ -2,7 +2,8 @@ from math import sqrt, pow
 
 """
     This is a program that prompts the user to enter the
-    coordinates (x1, y1), (x2, y2), and (x3, y3) of the vertices of a triangle and displays its area.
+    coordinates (x1, y1), (x2, y2), and (x3, y3) of the vertices of a triangle and calculates and displays its area 
+    using Hero's formula.
 """
 
 # Reads in the co-ordinate of each side of the triangle.
