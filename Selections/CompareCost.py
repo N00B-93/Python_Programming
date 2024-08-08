@@ -4,7 +4,7 @@
 """
 
 # Reads in the weight and price of the first package.
-weight1, price1 = eval(input("\nEnter the weight and price of the first package separated by comma: "))
+weight1, price1 = float(input("\nEnter the weight and price of the first package separated by comma: "))
 
 # Displays an error message and exits the program if the user enters an invalid weight or price.
 if weight1 <= 0 or price1 <= 0:
@@ -12,7 +12,7 @@ if weight1 <= 0 or price1 <= 0:
     exit(1)
 
 # Reads in the weight and price of the second package.
-weight2, price2 = eval(input("\nEnter the weight and price of the second package separated by comma: "))
+weight2, price2 = float(input("\nEnter the weight and price of the second package separated by comma: "))
 
 # Displays an error message and exits the program if the user enters an invalid weight or price.
 if weight2 <= 0 or price2 <= 0:

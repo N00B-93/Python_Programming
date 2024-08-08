@@ -21,6 +21,9 @@ def main() -> None:
         # Breaks out of the infinite loop if user enters 0.
         if question == "0":
             break
+        elif question == "":
+            print("\nError: Use non empty strings as questions only, Try again.\n")
+            continue
 
         # Display a response to the user's question.
         print("\n" + responses[randint(0, 12)])
