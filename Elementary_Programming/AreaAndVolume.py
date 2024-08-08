@@ -9,7 +9,7 @@ from math import pi
 radius = float(input("\nEnter the radius of the cylinder: "))
 
 # Takes length from the user.
-length = float(input("\nEnter the length of the cylinder:"))
+length = float(input("\nEnter the length of the cylinder: "))
 
 # Calculates the area.
 area = pi * radius ** 2
