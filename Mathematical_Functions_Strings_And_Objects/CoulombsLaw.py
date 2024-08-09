@@ -17,11 +17,13 @@ q2 = float(input("\nEnter the value of the second charge: "))
 r = float(input("\nEnter the distance between the charges: "))
 
 # Calculates the force of attraction(or repulsion) between charges.
-forceBetweenCharges = (PERMITTIVITY_OF_FREE_SPACE * q1 * q2) / r
+forceBetweenCharges = (PERMITTIVITY_OF_FREE_SPACE * q1 * q2) / r ** 2
 
 # Displays the result.
 if forceBetweenCharges > 0:
     print("\nThe force of attraction between the charges is", format(forceBetweenCharges, ".3e"), 'N')
-else:
+elif forceBetweenCharges < 0:
     print("\nThe force of repulsion between the charges is", format(forceBetweenCharges, ".3e"), 'N')
+else:
+    print("\nEach charge exerts an equal and opposite force of magnitude: ", format(forceBetweenCharges, "3e"), "N on each other")
 
