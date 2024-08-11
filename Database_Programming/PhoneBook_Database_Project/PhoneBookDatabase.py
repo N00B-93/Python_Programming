@@ -2,7 +2,7 @@ import sqlite3
 
 """
     This is a program that creates a database named phonebook.db. The database has
-    a table named Entries, with columns for a person’s name and phone number.
+    a table named Entries, with columns for a person's name and phone number.
 """
 # Initializes a connection Object to None.
 connection = None

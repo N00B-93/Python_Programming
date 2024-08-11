@@ -18,7 +18,7 @@ import sqlite3
 connection = None
 
 try:
-    # Creates a connectio.
+    # Creates a connection.
     connection = sqlite3.connect('studentInfo.db')
 
     # Creates a Cursor Object.

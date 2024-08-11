@@ -18,7 +18,7 @@ try:
 
     # SQL Query that creates the Doctors table.
     sqlQuery2 = """CREATE TABLE IF NOT EXISTS Doctors(DoctorID INTEGER PRIMARY KEY, DoctorName TEXT, HospitalID INTEGER,
-                JoiningDate TEXT, Speciality TEXT, Salary DOUBLE, Experience INTEGER, FOREIGN KEY(HospitalID) 
+                JoiningDate TEXT, Specialty TEXT, Salary DOUBLE, Experience INTEGER, FOREIGN KEY(HospitalID) 
                 REFERENCES Hospitals(HospitalID))"""
     # Executes sqlQuery2.
     connectionCursor.execute(sqlQuery2)

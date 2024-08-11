@@ -10,19 +10,19 @@ def addNewDoctor():
 
         connectionCursor = connection.cursor()
 
-        sqlQuery = """INSERT INTO Doctors(DoctorID, DoctorName, HospitalID, JoiningDate, Speciality, Salary, Experience) 
+        sqlQuery = """INSERT INTO Doctors(DoctorID, DoctorName, HospitalID, JoiningDate, Specialty, Salary, Experience) 
         VALUES(?, ?, ?, ?, ?, ?, ?) """
 
         doctorID = int(input("\nEnter DoctorID: "))
         doctorName = input("\nEnter Doctor's Name: ")
         hospitalID = int(input("\nEnter HospitalID: "))
         joiningDate = input("\nEnter Joining Date (dd/mm/yyyy): ")
-        speciality = input("\nEnter Speciality: ")
+        specialty = input("\nEnter Specialty: ")
         salary = float(input("\nEnter Salary: $ "))
         experience = input("\nEnter Years of Experience: ")
 
         connectionCursor.execute(sqlQuery, (doctorID, doctorName, hospitalID, joiningDate,
-                                            speciality, salary, experience))
+                                            specialty, salary, experience))
         connection.commit()
         if connectionCursor.rowcount == 1:
             print(f"\nDoctor {doctorName} Added Successfully!")
@@ -60,7 +60,7 @@ def searchExistingDoctor():
             return
         print("\nDoctor Found!\n")
         print(f"\nDoctorID: {doctor[0]}\nDoctor Name: {doctor[1]}\nHospitalID: {doctor[2]}\nJoining Date: {doctor[3]}\n"
-              f"Speciality: {doctor[4]}\nSalary: $ {doctor[5]}\nExperience: {doctor[6]}")
+              f"Specialty: {doctor[4]}\nSalary: $ {doctor[5]}\nExperience: {doctor[6]}")
     except sqlite3.Error as error:
         print(error)
     except Exception as error:
