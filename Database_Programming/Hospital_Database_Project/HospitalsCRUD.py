@@ -150,6 +150,10 @@ def showAllHospitals():
 
         hospitals = connectionCursor.fetchall()
 
+        if hospitals == []:
+            print("\nHospital database is empty!")
+            return
+
         for hospital in hospitals:
             print(f"\nHospitalID: {hospital[0]}\nHospital Name: {hospital[1]}\nBed Count: {hospital[2]}")
     except sqlite3.Error as error:
