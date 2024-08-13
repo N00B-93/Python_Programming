@@ -9,7 +9,7 @@ from math import pow
 finalAccountValue = float(input("\nEnter the final account value: $"))
 
 # Reads in the annual interest rate in %
-annualInterestRate = float(input("\nEnter the annual interest rate: ")) / 100.0
+annualInterestRate = float(input("\nEnter the annual interest rate(e.g., 3%): ")) / 100.0
 
 # Reads in the number of years.
 years = int(input("\nEnter the number of years: "))
