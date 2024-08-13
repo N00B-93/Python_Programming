@@ -6,11 +6,15 @@
 # Prompts the user to enter the food charge.
 foodCharge = float(input("\nEnter the food charge: $ "))
 
+# Constants to hold the percentage tip and sales tax.
+PERCENTAGE_TIP = 0.18
+SALES_TAX = 0.07
+
 # calculates the tip.
-tip = 0.18 * foodCharge
+tip = PERCENTAGE_TIP * foodCharge
 
 # Calculates the sales charge.
-salesCharge = 0.07 * foodCharge
+salesCharge = SALES_TAX * foodCharge
 
 # Calculates the total expenditure.
 totalExpenditure = foodCharge + tip + salesCharge
