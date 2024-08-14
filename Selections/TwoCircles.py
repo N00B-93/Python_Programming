@@ -15,10 +15,9 @@ x2, y2, r2 = eval(input("\nEnter the center coordinates and radius of circle1 se
 # Calculates the distance between their centers.
 distance = sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2))
 
-if distance <= abs(r1 -r2):  # Checks if circle1 is in circle2
+if distance <= abs(r1 - r2):  # Checks if circle1 is in circle2
     print("\nCircle1 is inside Circle2.")
 elif distance <= abs(r1 + r2):  # Checks if circle2 overlaps circle1
     print("\nCircle2 overlaps circle1")
 else:  # Checks if circle2 is outside circle1
     print("\nCircle2 is outside circle1")
-
