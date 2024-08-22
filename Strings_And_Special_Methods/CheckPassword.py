@@ -39,6 +39,11 @@ def numberOfDigits(password):
 def main():
     # Reads in a password to be checked.
     password = input("\nEnter your password: ")
+    
+    # Displays an error message and terminates the program if the user enters an empty string as password.
+    if password == "":
+        print("\nError: Password cannot be empty, try again.")
+        exit(1)
 
     # Checks whether the password is valid or not and displays the result.
     if validLength(password) and numberOfDigits(password) >= 2 and password.isalnum():
