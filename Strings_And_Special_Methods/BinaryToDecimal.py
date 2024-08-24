@@ -41,12 +41,14 @@ def binaryToDecimal(binaryString):
 
 def main():
     # Reads in a binary string.
-    binaryString = input("\nEnter a binary string: ")
+    binaryString = input("\nEnter a binary string: ").strip()
 
     # Checks if the binary string entered by the user is valid.
     if not checkBinaryString(binaryString):
         print("\nInvalid binary string!")
         exit(1)
+    elif binaryString == "":
+        print("\nError: Use non empty Strings only, Try again")
 
     # Converts the binary string to decimal and displays the result.
     print(f"\nThe decimal equivalent of '{binaryString}' is: {binaryToDecimal(binaryString)}")
