@@ -2,7 +2,7 @@ from math import pow, sqrt
 
 """
     This is a program that prompts the user to enter two points, displays the distance between
-them, and indicates whether they are near each other.
+them, and indicates whether they are near each other(two points are near of the distance between them is less than 5.
 """
 
 
