@@ -7,7 +7,7 @@ from sys import exit
 """
 
 
-def toPigLatin(string):
+def toPigLatin(string: str) -> str:
     """
     Converts a given String to its Pig Latin equivalent.
     :param string: (str) The String to be converted to Pig Latin.
@@ -18,10 +18,7 @@ def toPigLatin(string):
 
     letters.append(letters.pop(0))
 
-    pigLatin = ""
-
-    for i in range(len(letters)):
-        pigLatin += letters[i]
+    pigLatin = "".join(letters)
 
     if pigLatin.isupper():
         return pigLatin + 'AY '
