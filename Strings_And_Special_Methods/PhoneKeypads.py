@@ -42,16 +42,19 @@ def main():
         phoneNumber = input("\nEnter your phone number: ")
 
     # Initializes a newPhoneNumber variable as a string.
-    newPhoneNumber = ""
+    newPhoneNumber = list(phoneNumber)
+    
+    counter = 0
 
-    # Replace the occurrence of a letter in the phone number with a variable and concatenate it to the new phone Number.
-    for character in phoneNumber:
-        if character.isnumeric():
-            newPhoneNumber += character
-        elif character.isalpha():
-            newPhoneNumber += getNumber(character)
-        else:
-            newPhoneNumber += character
+    # Replace the occurrence of a letter in the phone number with the corresponding number.
+    for character in newPhoneNumber:
+        if character.isalpha():
+            newPhoneNumber[counter] = getNumber(character)
+        elif not character.isalnum():
+            newPhoneNumber[counter] = ""
+        counter += 1
+    
+    newPhoneNumber = "".join(newPhoneNumber)
 
     # Displays the result.
     print(f"\nPhone Number: {newPhoneNumber}")
