@@ -48,7 +48,8 @@ def main():
         print("\nInvalid binary string!")
         exit(1)
     elif binaryString == "":
-        print("\nError: Use non empty Strings only, Try again")
+        print("\nError: Use non empty binary Strings only, Try again.")
+        exit(2)
 
     # Converts the binary string to decimal and displays the result.
     print(f"\nThe decimal equivalent of '{binaryString}' is: {binaryToDecimal(binaryString)}")
