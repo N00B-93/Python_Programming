@@ -17,12 +17,12 @@ def main():
 
     # Prints an error message and terminates the program if the length of the user input is not 12.
     if len(isbn13) != 12:
-        print("Invalid input, Enter 12 digits.")
+        print("\nInvalid input, Enter 12 digits.")
         exit(1)
 
     # Creates variables that stores the odd and even positioned numbers as strings.
-    evenDigits = isbn13[::2]
-    oddDigits = isbn13[1::2]
+    oddDigits = isbn13[::2]
+    evenDigits = isbn13[1::2]
 
     sumOfEvenDigits = sumOfOddDigits = 0
 
