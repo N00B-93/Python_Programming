@@ -1,4 +1,4 @@
-from BinaryToDecimal import binaryToDecimal
+from BinaryToDecimal import binaryToDecimal, checkBinaryString
 from sys import exit
 
 """
@@ -9,36 +9,35 @@ to convert a binary value into a hexadecimal.
 
 
 def binaryToHex(binaryValue):
+    """
+    Converts a binary String into an hexadecimal String.
+
+    Parameter:
+        binaryValue (str): A String representing a binary number.
+    
+    Returns:
+        (str): The hexadecimal equivalent of a binary number.
+    """
     # Converts the binary string to decimal.
     decimal = binaryToDecimal(binaryValue)
 
-    hexNumber = ""
+    hexNumber = []
+
     while decimal > 0:
         # Extracts the last digit of decimal number.
         remainder = decimal % 16
         # Adds the remainder to the hexNumber.
         if 10 <= remainder <= 15:
-            hexNumber += chr(remainder - 10 + ord("A"))
+            hexNumber.append(chr(remainder - 10 + ord("A")))
         else:
-            hexNumber += str(remainder)
+            hexNumber.append( str(remainder))
         # Peels of the last digit of decimal number.
         decimal //= 16
+
+    hexString = ''.join(hexNumber)
+
     # Returns the reverse of hexNumber.
-    return hexNumber[::-1]
-
-
-def checkBinaryString(binaryValue):
-    """
-    Checks if the binary value is valid.
-
-    :param binaryValue: The binary value to be checked.
-
-    :return: (bool) True if the binary value is valid, otherwise False.
-    """
-    for character in binaryValue:
-        if character not in "01":
-            return False
-    return True
+    return hexString[::-1]
 
 
 def main():
@@ -48,6 +47,9 @@ def main():
     if not checkBinaryString(binaryNumber):
         print("\nInvalid binary string!")
         exit(1)
+    elif binaryNumber == '':
+        print("\nError: Use non empty Strings only, Try again.")
+        exit(2)
 
     # Displays the result.
     print(f"\nThe Hexadecimal equivalent of '{binaryNumber}' is: {binaryToHex(binaryNumber)}")
