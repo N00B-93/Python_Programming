@@ -13,7 +13,7 @@ def main():
 
     # Displays an error message and terminates the program if the length of the SSN Number is not 11.
     if len(ssnNumber) != 11:
-        print("Invalid SSN number!")
+        print("\nInvalid SSN number!")
         exit(1)
 
     # Breaks the SSN Number into three sub strings.

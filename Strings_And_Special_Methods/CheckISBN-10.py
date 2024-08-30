@@ -17,7 +17,7 @@ def main():
 
     # Prints an error message and terminates the program if the length of the number entered is not equal to 9.
     if len(isbn10) != 9:
-        print("Invalid input, Enter 9 digits.")
+        print("\nInvalid input, Enter 9 digits.")
         exit(1)
 
     total = 0
@@ -31,7 +31,7 @@ def main():
 
     # Displays the result based on the value of the checkSum.
     if checksum == 10:
-        print(f"\nThe ISBN-10 number is: {isbn10 + "X"}")
+        print(f"\nThe ISBN-10 number is: {isbn10 + 'X'}")
     else:
         print(f"\nThe ISBN-10 number is: {isbn10 + str(checksum)}")
 
