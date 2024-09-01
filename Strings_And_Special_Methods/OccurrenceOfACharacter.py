@@ -26,11 +26,24 @@ def count(string, ch):
 def main():
     # Reads in a String and a Character whose occurrence in the string is to be counted.
     string = input("\nEnter a string: ")
-    ch = input("\nEnter a character whose occurrence is to be counted: ")
 
-    occurrences = count(string, ch)
+    # Displays an error message and terminates the program if the user enters an empty String.
+    if string == '':
+        print("\nError: Use non empty strings only, Try again.")
+        exit(1)
 
-    print(f"\nThe occurrences of '{ch}' in {string} is: '{occurrences}'.")
+    char = input("\nEnter a character whose occurrence is to be counted: ")
+
+    # Displays an error message and terminates the program if the user enters an empty character.
+    if char == '':
+        print("\nError: Enter a valid character, Try again.")
+        exit(2)
+
+    # Determines the number of occurrence of the character in the String.
+    occurrences = count(string, char)
+
+    # Displays the result.
+    print(f"\nThe occurrences of '{char}' in {string} is: '{occurrences}'.")
 
 
 if __name__ == "__main__":
