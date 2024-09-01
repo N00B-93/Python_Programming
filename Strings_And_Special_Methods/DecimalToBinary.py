@@ -26,10 +26,18 @@ def decimalToBinary(value):
 
 def main():
     # Reads in a decimal Integer to be converted to binary.
-    decimalNumber = int(input("\nEnter a decimal Integer: "))
+    decimalNumber = input("\nEnter a decimal Integer: ")
+
+    # if-elif block that validates user's input.
+    if decimalNumber == '':
+        print("\nError: Use integers only, Try again.")
+        exit(1)
+    elif int(decimalNumber) < 0:
+        print("\nError: Use positive integers only, Try again.")
+        exit(2)
 
     # Displays the result.
-    print(f"\nThe binary equivalent of {decimalNumber} is: {decimalToBinary(decimalNumber)}")
+    print(f"\nThe binary equivalent of {decimalNumber} is: {decimalToBinary(int(decimalNumber))}")
 
 
 if __name__ == "__main__":
