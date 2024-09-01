@@ -12,13 +12,15 @@ def capitalize(string: str) -> str:
 
     :return: (str) A String with first letter of each word in the String capitalized.
     """
-    capitalizedString: str = string[0].upper()
+    characterList: list = [string[0].upper()]
 
     for i in range(1, len(string)):
         if string[i - 1] == " ":
-            capitalizedString += string[i].upper()
+            characterList.append(string[i].upper())
         else:
-            capitalizedString += string[i]
+            characterList.append(string[i])
+
+    capitalizedString: str = "".join(characterList)
     return capitalizedString
 
 
@@ -28,7 +30,7 @@ def main() -> None:
     
     # Continues to loop till the user enters a String whose length is greater than 1.
     while string == '':
-        print("\nInvalid input, Use a String with length greater than 1.")
+        print("\nInvalid input, Use non empty strings only, Try again.")
         string = input("\nEnter a String to be capitalized: ")
 
     string.strip()
