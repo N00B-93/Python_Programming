@@ -30,7 +30,7 @@ def binaryToHex(binaryValue):
         if 10 <= remainder <= 15:
             hexNumber.append(chr(remainder - 10 + ord("A")))
         else:
-            hexNumber.append( str(remainder))
+            hexNumber.append(str(remainder))
         # Peels of the last digit of decimal number.
         decimal //= 16
 
