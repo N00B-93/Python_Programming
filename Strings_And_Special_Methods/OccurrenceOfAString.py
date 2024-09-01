@@ -17,34 +17,17 @@ def count(s1, s2):
     """
     counter = 0
 
-    subStringCheck = True
-
-    for i in range(len(s1)):
-        # Initializes a counter variable to the current value of i.
-        k = i
-        for j in range(len(s2)):
-            # Compares the current character in s1 to the current character in s2.
-            if s1[k] == s2[j]:
-                k += 1
-                continue
-            # Breaks out of the inner loop if the characters don't match.
-            else:
-                subStringCheck = False
-                break
-        # Increments counter if the current portion of the string that is checked is a substring.
-        if subStringCheck:
+    for k in range(len(s1) - len(s2) + 1):
+        if s1[k] == s2[0] and s1[k:k + len(s2)] == s2:
             counter += 1
-        # Resets the subStringCheck variable back to True.
-        subStringCheck = True
-
     return counter
 
 
 def main():
     while True:
         # Reads in two Strings.
-        s1 = input("\nEnter the first string: ")
-        s2 = input("\nEnter the second string: ")
+        s1 = input("\nEnter the first string: ").strip()
+        s2 = input("\nEnter the second string: ").strip()
 
         if s1 != "" and s2 != "":
             break
@@ -52,7 +35,10 @@ def main():
             print("\nError: Use non empty Strings only, Try again.")
 
     # Displays the result.
-    print(f"\nThe number of occurrences of '{s2}' in '{s1}' is: {count(s1, s2)}")
+    if len(s1) >= len(s2):
+        print(f"\nThe number of occurrences of '{s2}' in '{s1}' is: {count(s1, s2)}")
+    elif len(s2) > len(s1):
+        print(f"\nThe number of occurrences of '{s1}' in '{s2}' is: {count(s2, s1)}")
 
 
 if __name__ == "__main__":

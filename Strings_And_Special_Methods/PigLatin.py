@@ -38,14 +38,14 @@ def main() -> None:
         print(f"\nLetter: {words[0]}\nPig Latin {words[0] + 'ay'}")
         exit(0)
 
-    pigLatin = ""
+    pigLatin = []
     
     # Converts each String in the words list to Pig Latin.
     for i in range(len(words)):
-        pigLatin += toPigLatin(words[i])
+        pigLatin.append(toPigLatin(words[i]))
 
     # Displays the result.
-    print(f"\nSentence: {sentence}\n\nPig Latin: {pigLatin}")
+    print(f"\nSentence: {sentence}\n\nPig Latin: {"".join(pigLatin)}")
 
 
 if __name__ == "__main__":
