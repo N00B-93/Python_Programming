@@ -1,15 +1,22 @@
 """
     This is a program that prompts the user to enter an integer for
     today’s day of the week (Sunday is 0, Monday is 1, ..., and Saturday is 6). It also prompts
-    the user to enter the number of days after today for a future day and displays
-    the future day of the week.
+    the user to enter the number of days after today for a future day and displays the future day of the week.
 """
 
 # Prompts the user to enter a number representing the current day.
 today = int(input("\nEnter today's day: "))
 
+if today < 0 or today > 6:
+    print("\nError: Use a number from 0 to 6 to represent the present day, Try again.")
+    exit(1)
+
 # Prompts the user to enter the number of days elapsed after the current day.
 numberOfDaysElapsed = int(input("\nEnter number of days elapsed since today: "))
+
+if numberOfDaysElapsed < 0:
+    print("\nError: Number of days elapsed cannot be negative, Try again with a positive number.")
+    exit(2)
 
 # Calculates the future day.
 futureDay = numberOfDaysElapsed % 7 + today
