@@ -10,6 +10,12 @@ from urllib.request import urlopen
 def main() -> None:
     # Prompts the user to enter a URL to process.
     url: str = input("\nEnter a valid URL: ")
+
+    # Displays an error message and terminates the program if the user enters an empty String as a URL.
+    if not url:
+        print("\nError: URL cannot be an empty string, Try again.")
+        exit(1)
+
     # Checks if the URL starts with https://www and adds it if it doesn't.
     if not url.startswith("https://www."):
         url = "https://www." + url
@@ -31,4 +37,3 @@ def main() -> None:
         
 if __name__ == "__main__":
     main()
-
