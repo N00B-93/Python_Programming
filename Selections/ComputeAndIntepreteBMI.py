@@ -25,7 +25,7 @@ if weight <= 0:
 feet, inches = eval(input("\nEnter feet and inches separated by comma: "))
 
 # Displays an error message and terminates the program if the feet or inches is <= 0.
-if feet <= 0 or inches <= 0:
+if feet <= 0 or inches < 0:
     print(f"\nError: Use positive values > 0 for feet and inches, Try again.\n")
     exit(2)
 
