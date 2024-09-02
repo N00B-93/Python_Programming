@@ -1,11 +1,12 @@
 from math import pow, sqrt
+from typing import Final
 
 """
     This is a program that prompts the user to enter a
     point (x, y) and checks whether the point is within the circle centered at (0, 0) with radius 10.
 """
 
-RADIUS = 10
+RADIUS: Final[int] = 10
 
 # Prompts the user to enter the x and y coordinate of a point.
 xCoord, yCoord = eval(input("\nEnter the x and y coordinates of the point separated by comma: "))
