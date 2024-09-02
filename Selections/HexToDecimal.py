@@ -6,7 +6,7 @@ from sys import exit
 """
 
 # Prompts the user to enter a hex character.
-hexDigit = input("\nEnter an hex character(A - F): ")
+hexDigit = input("\nEnter an hex character(A - F): ").upper()
 
 # Terminates the program if the user enters an invalid character.
 if hexDigit < 'A' or hexDigit > 'F':
