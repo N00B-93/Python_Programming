@@ -15,7 +15,7 @@ if (month < 1 or month > 12) or (day < 1 or day > 31):
     print("\nInvalid day or month\nTry again.")
     exit(0)
 
-# Changes user month input from 1 or 2 to 2 or 13 and the reduces the year by 1.
+# Changes user month input from 1 or 2 to 13 or 14 and the reduces the year by 1.
 match month:
     case 1:
         month = 13
