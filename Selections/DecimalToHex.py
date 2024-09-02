@@ -11,15 +11,12 @@ decimal = int(input("\nEnter a number from 0 - 15: "))
 
 hexValue = ''
 
-# Assigns the decimal value to the hex values variable if the decimal value is in the range 0 - 9.
-if 0 <= decimal < 10:
-    hexValue = decimal
+if 0 > decimal or decimal > 15:  # Checks if the value entered is in the range 1 - 15
+    print("\nInvalid Input, Try Again with a decimal number from 0-15.")
+    exit(1)
+elif 0 <= decimal < 10:  # Displays the number if it is
+    print(f"\nThe Hex value is: {decimal}")
+    exit(0)
 else:  # Matches a decimal digit to the correct hex value.
     hexValue = chr(ord('A') + (decimal - 10))
-
-if 0 > decimal or decimal > 15:  # Checks if the value entered is in the range 1 - 15
-    print("\nInvalid Input, Try Again.")
-    exit(0)
-
-# Displays the result.
-print(f"\nThe Hex value is: {hexValue}")
+    print(f"\nThe Hex value is: {hexValue}")  # Displays the result.
