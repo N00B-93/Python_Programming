@@ -11,7 +11,7 @@ number = int(input("\nEnter a 3-digit number: "))
 
 # Terminates the program if the number entered by the user is not a 3-digit number.
 if number < 100 or number > 999:
-    print("\nInvalid Input, Enter a 3-digit number")
+    print("\nInvalid Input, Use a 3-digit number only.")
     exit(0)
 
 # Peels off each digit in the number.
