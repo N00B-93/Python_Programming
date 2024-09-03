@@ -9,6 +9,11 @@ def main() -> None:
         # Prompts the user to enter a list of numbers.
         numberList = input("\nEnter a list of numbers: ").split()
 
+        # Displays an error message and terminates the program if the user doesn't enter any number.
+        if not numberList:
+            print("\nError: You didn't enter any number, Try again with a list of numbers.")
+            exit(1)
+
         numberList = [int(number) for number in numberList]
     except ValueError:
         print("\nError: Please use only integers separated by space, try again.")
