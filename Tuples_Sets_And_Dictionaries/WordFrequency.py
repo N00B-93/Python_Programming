@@ -25,11 +25,8 @@ def main() -> None:
             words = fileHandler.read().split()
     
         for word in words:
-            # Continues the iteration if the current word exists as a key in the dictionary.
-            if word in wordsAndOccurrence:
-                continue
-            else:
-                # Append a word and its occurrence in the wordsAndOccurrence dictionary.
+            # Append a word and its occurrence in the wordsAndOccurrence dictionary.
+            if word not in wordsAndOccurrence:
                 wordsAndOccurrence.update({word: words.count(word)})
     
         # Displays each word and its occurrence.
