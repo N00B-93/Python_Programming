@@ -14,15 +14,22 @@ def isSorted(lst):
 
     :return: (bool) True if list is sorted in ascending order else False.
     """
-    for i in range(len(lst) - 1):
-        if lst[i] > lst[i + 1]:
-            return False
-    return True
+    # for i in range(len(lst) - 1):
+        # if lst[i] > lst[i + 1]:
+            # return False
+    # return True
+    return lst == sorted(lst)
 
 
 def main():
     # Reads in a list of numbers as a String.
     numberString = input("\nEnter a list of numbers separated by space: ")
+    
+    # Validates user input.
+    if not numberString:
+        print("\nError: No number entered, Try again with a list of numbers.")
+        return
+
 
     # Converts the String of numbers to a list.
     numberList = numberString.split()
