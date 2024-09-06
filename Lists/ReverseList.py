@@ -24,8 +24,13 @@ def reverseList(lst):
 
 
 def main():
-    # Reads in a list of numbers as a String.s
+    # Reads in a list of numbers as a String.
     numberString = input("\nEnter a list of numbers: ")
+
+    # Validates the user input
+    if not numberString:
+        print("\nError: No number entered, Try again with a list of numbers.")
+        return
 
     # Converts the String of numbers into a list.
     numberList = numberString.split()
