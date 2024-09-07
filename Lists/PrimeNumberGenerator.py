@@ -19,7 +19,6 @@ def isPrime(number: int) -> bool:
     while divisor < (number // 2) + 1:
         if number % divisor != 0:
             divisor += 1
-            continue
         else:
             return False
     return True
@@ -31,7 +30,7 @@ def main() -> None:
     
     # Displays an error message and continues to prompt the user to enter a number greater than 1.
     while number <= 1:
-        print("\nInvalid input, Try again.")
+        print("\nInvalid input, Try again with a number greater than 1.")
         number: int = int(input("\nEnter an integer greater than 1: "))
 
     # Creates an empty list.
