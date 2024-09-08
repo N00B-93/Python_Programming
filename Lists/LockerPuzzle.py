@@ -22,6 +22,7 @@ def changeLocker(studentNumber, lockers):
 
     :return: None.
     """
+    """
     i = 0
     if studentNumber == 1:
         while i < len(lockers):
@@ -37,6 +38,13 @@ def changeLocker(studentNumber, lockers):
         while i < len(lockers):
             lockers[i] = not lockers[i]
             i += studentNumber
+    """
+
+    i = studentNumber
+    while i < len(lockers):
+        lockers[i] = not lockers[i]
+        i += studentNumber
+
 
 
 def main():
