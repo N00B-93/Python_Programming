@@ -28,6 +28,11 @@ def main():
     # Reads in a collection of numbers as a String
     numberString = input("\nEnter a list of numbers separated by space: ")
     
+    # Validates user input.
+    if not numberString:
+        print("\nError: No number entered, Try again with a list of numbers.")
+        return
+    
     # Converts the string of numbers to a list.
     numberList = numberString.split()
     
