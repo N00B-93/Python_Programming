@@ -1,3 +1,9 @@
+"""
+    Twin primes are a pair of prime numbers that differ by 2. For example, 3 and 5, 5 and 7, and 11 and
+    13 are twin primes. This is a program to find all twin primes less than 1,000.
+"""
+
+
 def isPrime(n):
     """
     Checks if a number is prime or not.
@@ -21,7 +27,7 @@ def printTwinPrimes():
     """
     twin = 2  # Initialize the first twin prime
     print("\nThe twin primes less than 1000 are:")
-    for i in range(3, 1001):
+    for i in range(3, 1000):
         if isPrime(i):
             if i - twin == 2:
                 print("(", twin, ", ", i, ")", sep="")
