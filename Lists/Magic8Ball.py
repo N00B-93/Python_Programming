@@ -26,7 +26,7 @@ def main() -> None:
             continue
 
         # Display a response to the user's question.
-        print("\n" + responses[randint(0, 12)])
+        print("\n" + responses[randint(0, 11)])
 
 
 if __name__ == "__main__":
