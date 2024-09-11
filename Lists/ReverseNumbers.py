@@ -8,6 +8,11 @@ def main():
     # Reads in a list of numbers as a String.
     numberString = input("\nEnter a list of numbers separated by space: ")
 
+    # Validates user input.
+    if not numberString:
+        print("\nError: No number entered, Try again with a list of numbers.")
+        return
+
     # Converts the String of numbers into a list of numbers
     numbers = numberString.split()
 
@@ -15,6 +20,7 @@ def main():
     print("\nThe numbers in reverse order are: ", end="")
     for i in range(len(numbers) - 1, -1, -1):
         print(f"{numbers[i]} ", end="")
+    print()
 
 
 if __name__ == "__main__":
