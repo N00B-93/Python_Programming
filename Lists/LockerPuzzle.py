@@ -46,7 +46,6 @@ def changeLocker(studentNumber, lockers):
         i += studentNumber
 
 
-
 def main():
     # Creates an array of 101 boolean values.
     lockers = 101 * [False]
@@ -60,6 +59,7 @@ def main():
     for i in range(1, len(lockers)):
         if lockers[i]:
             print(f"L{i} ", end="")
+    print()
 
 
 if __name__ == "__main__":
