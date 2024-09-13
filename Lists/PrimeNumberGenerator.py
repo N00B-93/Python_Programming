@@ -1,6 +1,6 @@
 """
-    This is a program that prompts the user to enter a number greater than 1 and then generates a list of numbers from 2 to the number entered.
-    The program than passes each element in the list to a function;
+    This is a program that prompts the user to enter a number greater than 1 and then generates a list of numbers from
+    2 to the number entered. The program than passes each element in the list to a function;
                 def isPrime(number: int) -> bool
     and then loops through the list and displays whether an element is prime or composite(not prime).
 """
@@ -39,7 +39,7 @@ def main() -> None:
     # Fills the list with number from 2 to the number entered by the user.
     [listOfNumbers.append(i) for i in range(2, number + 1)]
 
-     # Loops through the list and displays whether an element is prime or not.
+    # Loops through the list and displays whether an element is prime or not.
     for element in listOfNumbers:
         if isPrime(element):
             print(f"\n{element} is prime.")
@@ -48,5 +48,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-     main()
-
+    main()
